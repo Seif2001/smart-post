@@ -10,6 +10,19 @@ A Smart Lamppost System (SLS) using ESP32 microcontrollers and the Cooja simulat
 
 2. **MQ135 Gas sensor**
    
-   ![MQ135 Gas sensor](https://electronicsprojectshub.com/wp-content/uploads/2018/02/MQ135-pinout.jpg)
-   
+   Measures gas concentration levels in parts per million (ppm), providing data on air quality
+    
    The datasheet can be viewed [here](https://www.olimex.com/Products/Components/Sensors/Gas/SNS-MQ135/resources/SNS-MQ135.pdf)
+   
+4. **LDR Sensor**
+   
+   Measures Light intensity
+   
+   The datasheet can be viewed [here](https://components101.com/sites/default/files/component_datasheet/LDR%20Datasheet.pdf)
+6. **DHT11 Sensor**
+   
+   Measures Tempreture and humidity levels
+   
+   The datasheet can be viewed [here](https://www.mouser.com/datasheet/2/758/DHT11-Technical-Data-Sheet-Translated-Version-1143054.pdf)
+
+   
