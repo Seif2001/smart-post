@@ -17,16 +17,20 @@
 
 DHT dht(DHTPIN, DHT11);
 
-class Periphirals{
-    public:
-        Periphirals(){
+
+
+
+        void setupPeripherals(){
             pinMode(REDLEDPIN,   OUTPUT);
             pinMode(GREENLEDPIN, OUTPUT);
             pinMode(BLUELEDPIN,  OUTPUT);
 
             pinMode(LDRLEDPIN,OUTPUT);
+
         }
         float getTemp(){
+        dht.begin();
+
         float t = dht.readTemperature();
         if (isnan(t)) {
           Serial.println(F("Failed to read!"));
@@ -99,6 +103,5 @@ class Periphirals{
             digitalWrite(BUZZPIN,LOW);
           }
         }
-};
 
 #endif 
