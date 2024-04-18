@@ -1,40 +1,20 @@
-/*
-    Video: https://www.youtube.com/watch?v=oCMOYS71NIU
-    Based on Neil Kolban example for IDF: https://github.com/nkolban/esp32-snippets/blob/master/cpp_utils/tests/BLE%20Tests/SampleNotify.cpp
-    Ported to Arduino ESP32 by Evandro Copercini
-    updated by chegewara
-
-   Create a BLE server that, once we receive a connection, will send periodic notifications.
-   The service advertises itself as: 4fafc201-1fb5-459e-8fcc-c5c9c331914b
-   And has a characteristic of: beb5483e-36e1-4688-b7f5-ea07361b26a8
-
-   The design of creating the BLE server is:
-   1. Create a BLE Server
-   2. Create a BLE Service
-   3. Create a BLE Characteristic on the Service
-   4. Create a BLE Descriptor on the characteristic
-   5. Start the service.
-   6. Start advertising.
-
-   A connect hander associated with the server starts a background task that performs notification
-   every couple of seconds.
-*/
 #include <BLEDevice.h>
 #include <BLEServer.h>
 #include <BLEUtils.h>
 #include <BLE2902.h>
 
 
-
-// See the following for generating UUIDs:
-// https://www.uuidgenerator.net/
-
 #define SERVICE_UUID        "4fafc201-1fb5-459e-8fcc-c5c9c331914b"
-#define TEMP_CHARACTERISTIC_UUID "beb5483e-36e1-4688-b7f5-ea07361b26a8"
-#define HUMIDITY "beb5483e-36e1-4688-b7f5-ea07361b26a8"
-#define GAS_CHARACTERISTIC_UUID "beb5483e-36e1-4688-b7f5-ea07361b26a8"
+#define TEMP_CHARACTERISTIC_UUID "69f6ef8f-2da1-4c20-911d-f2f8077ab9d2"
+#define HUMIDITY_CHARACTERISTIC_UUID "0bbce066-e753-456c-b2da-27107f628b6f"
+#define GAS_CHARACTERISTIC_UUID "53bbbd34-5400-425a-8841-a555d99b4898"
 
-
+bool deviceConnected = false;
+bool oldDeviceConnected = false;
+BLEServer* pServer = NULL;
+BLECharacteristic* pTempCharacteristic = NULL;
+BLECharacteristic* pHumidityCharacteristic = NULL;
+BLECharacteristic* pGasCharacteristic = NULL;
 
 class MyServerCallbacks: public BLEServerCallbacks {
     void onConnect(BLEServer* pServer) {
@@ -46,124 +26,105 @@ class MyServerCallbacks: public BLEServerCallbacks {
     }
 };
 
-class BLE{
-    public:
-        BLEServer* pServer = NULL;
-        BLECharacteristic* pTempCharacteristic = NULL;
-        BLECharacteristic* pHumidityCharacteristic = NULL;
-        BLECharacteristic* pGasCharacteristic = NULL;
-        bool deviceConnected = false;
-        bool oldDeviceConnected = false;
+void notifyTemp(int value) {
+    if (deviceConnected) {
+        pTempCharacteristic->setValue(value);
+        pTempCharacteristic->notify();
+        delay(1000); 
+    }
+}
 
-        BLE(std::string name){
-            // Create the BLE Device
-            BLEDevice::init(name);
-        }
-        void createServer(){
-            // Create the BLE Server
-            pServer = BLEDevice::createServer();
-            pServer->setCallbacks(new MyServerCallbacks());
-        }
-        void createService(){
-            // Create the BLE Service
-            BLEService *pService = pServer->createService(SERVICE_UUID);
-        }
-        void createTempCharacteristic(){
-            // Create a BLE Characteristic
-            pTempCharacteristic = pService->createCharacteristic(
-                      CHARACTERISTIC_UUID,
-                      BLECharacteristic::PROPERTY_READ   |
-                      BLECharacteristic::PROPERTY_WRITE  |
-                      BLECharacteristic::PROPERTY_NOTIFY |
-                      BLECharacteristic::PROPERTY_INDICATE
-                    );
-            // https://www.bluetooth.com/specifications/gatt/viewer?attributeXmlFile=org.bluetooth.descriptor.gatt.client_characteristic_configuration.xml
-            // Create a BLE Descriptor
-            BLE2902 *pBLE2902;
-            pBLE2902 =  = new BLE2902();
-            pBLE2902->setNotifications(true);
-            BLEDescriptor *pDescr;
-            pDescr = new BLEDescriptor((uint16_t) 0x2901);
-            pDescr->setValue("Temp")
+void notifyHumidity(int value) {
+    if (deviceConnected) {
+        pHumidityCharacteristic->setValue(value);
+        pHumidityCharacteristic->notify();
+        delay(1000); 
+    }
+}
 
-            pTempCharacteristic->addDescriptor(pBLE2902);
-            pTempCharacteristic->addDescriptor(pDescr);
+void notifyGas(int value) {
+    if (deviceConnected) {
+        pGasCharacteristic->setValue(value);
+        pGasCharacteristic->notify();
+        delay(1000); 
+    }
+}
 
-        }
+void disconnect() {
+    if (!deviceConnected && oldDeviceConnected) {
+        delay(500);
+        pServer->startAdvertising();
+        Serial.println("start advertising");
+        oldDeviceConnected = deviceConnected;
+    }
+}
 
-        void createHumidityCharacteristic(){
-            // Create a BLE Characteristic
-            pHumidityCharacteristic = pService->createCharacteristic(
-                      CHARACTERISTIC_UUID,
-                      BLECharacteristic::PROPERTY_READ   |
-                      BLECharacteristic::PROPERTY_WRITE  |
-                      BLECharacteristic::PROPERTY_NOTIFY |
-                      BLECharacteristic::PROPERTY_INDICATE
-                    );
-            // Create a BLE Descriptor
-            BLE2902 *pBLE2902;
-            pBLE2902 =  = new BLE2902();
-            pBLE2902->setNotifications(true);
-            BLEDescriptor *pDescr;
-            pDescr = new BLEDescriptor((uint16_t) 0x2901);
-            pDescr->setValue("Humidity")
+void reconnect() {
+    if (deviceConnected && !oldDeviceConnected) {
+        oldDeviceConnected = deviceConnected;
+    }
+}
 
-            pHumidityCharacteristic->addDescriptor(pBLE2902);
-            pHumidityCharacteristic->addDescriptor(pDescr);
-        }
+void setupBLE() {
+    BLEDevice::init("ESP32_BLE_Server");
+    pServer = BLEDevice::createServer();
+    pServer->setCallbacks(new MyServerCallbacks());
 
-        void createGasCharacteristic(){
-            // Create a BLE Characteristic
-            pGasCharacteristic = pService->createCharacteristic(
-                      CHARACTERISTIC_UUID,
-                      BLECharacteristic::PROPERTY_READ   |
-                      BLECharacteristic::PROPERTY_WRITE  |
-                      BLECharacteristic::PROPERTY_NOTIFY |
-                      BLECharacteristic::PROPERTY_INDICATE
-                    );
-            // Create a BLE Descriptor
-            BLE2902 *pBLE2902;
-            pBLE2902 =  = new BLE2902();
-            pBLE2902->setNotifications(true);
-            BLEDescriptor *pDescr;
-            pDescr = new BLEDescriptor((uint16_t) 0x2901);
-            pDescr->setValue("Gas")
+    BLEService *pService = pServer->createService(SERVICE_UUID);
 
-            pGasCharacteristic->addDescriptor(pDescr);
-            pGasCharacteristic->addDescriptor(pBLE2902);
-        }
+    pTempCharacteristic = pService->createCharacteristic(
+        TEMP_CHARACTERISTIC_UUID,
+        BLECharacteristic::PROPERTY_READ |
+        BLECharacteristic::PROPERTY_WRITE |
+        BLECharacteristic::PROPERTY_NOTIFY |
+        BLECharacteristic::PROPERTY_INDICATE
+    );
 
-        void startAdvertising(){
-            // Start the service
-            pService->start();
+    BLEDescriptor *pTempDescriptor = new BLEDescriptor((uint16_t)0x2901);
+    pTempDescriptor->setValue("Temp");
+    pTempCharacteristic->addDescriptor(pTempDescriptor);
 
-            // Start advertising
-            BLEAdvertising *pAdvertising = BLEDevice::getAdvertising();
-            pAdvertising->addServiceUUID(SERVICE_UUID);
-            pAdvertising->setScanResponse(false);
-            pAdvertising->setMinPreferred(0x0);  // set value to 0x00 to not advertise this parameter
-            BLEDevice::startAdvertising();
-            Serial.println("Waiting a client connection to notify...");
-        }
+    BLE2902 *pTemp2902 = new BLE2902();
+    pTemp2902->setNotifications(true);
+    pTempCharacteristic->addDescriptor(pTemp2902);
 
-        void notify(int value){
-             // notify changed value
-            if (deviceConnected) {
-                pCharacteristic->setValue(value);
-                pCharacteristic->notify();
-            }
-            // disconnecting
-            if (!deviceConnected && oldDeviceConnected) {
-                delay(500); // give the bluetooth stack the chance to get things ready
-                pServer->startAdvertising(); // restart advertising
-                Serial.println("start advertising");
-                oldDeviceConnected = deviceConnected;
-            }
-            // connecting
-            if (deviceConnected && !oldDeviceConnected) {
-                // do stuff here on connecting
-                oldDeviceConnected = deviceConnected;
-            }
-        }
-};
+    pHumidityCharacteristic = pService->createCharacteristic(
+        HUMIDITY_CHARACTERISTIC_UUID,
+        BLECharacteristic::PROPERTY_READ |
+        BLECharacteristic::PROPERTY_WRITE |
+        BLECharacteristic::PROPERTY_NOTIFY |
+        BLECharacteristic::PROPERTY_INDICATE
+    );
 
+    BLEDescriptor *pHumidityDescriptor = new BLEDescriptor((uint16_t)0x2901);
+    pHumidityDescriptor->setValue("Humidity");
+    pHumidityCharacteristic->addDescriptor(pHumidityDescriptor);
+
+    BLE2902 *pHumidity2902 = new BLE2902();
+    pHumidity2902->setNotifications(true);
+    pHumidityCharacteristic->addDescriptor(pHumidity2902);
+
+    pGasCharacteristic = pService->createCharacteristic(
+        GAS_CHARACTERISTIC_UUID,
+        BLECharacteristic::PROPERTY_READ |
+        BLECharacteristic::PROPERTY_WRITE |
+        BLECharacteristic::PROPERTY_NOTIFY |
+        BLECharacteristic::PROPERTY_INDICATE
+    );
+
+    BLEDescriptor *pGasDescriptor = new BLEDescriptor((uint16_t)0x2901);
+    pGasDescriptor->setValue("Gas");
+    pGasCharacteristic->addDescriptor(pGasDescriptor);
+
+    BLE2902 *pGas2902 = new BLE2902();
+    pGas2902->setNotifications(true);
+    pGasCharacteristic->addDescriptor(pGas2902);
+
+    pService->start();
+    BLEAdvertising *pAdvertising = BLEDevice::getAdvertising();
+    pAdvertising->addServiceUUID(SERVICE_UUID);
+    pAdvertising->setScanResponse(false);
+    pAdvertising->setMinPreferred(0x0);
+    BLEDevice::startAdvertising();
+    Serial.println("Waiting a client connection to notify...");
+}
