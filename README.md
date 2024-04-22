@@ -51,3 +51,8 @@ A Smart Lamppost System (SLS) using ESP32 microcontrollers and the Cooja simulat
    2. Install server libraries
    3. Open hotspot and type your ssid and password in WIFI_SSID and WIFI_PASS fields
    4. Run code
+      
+   <blockquote style="background-color: #ffffcc; border-left: 5px solid #ffeb3b; padding: 10px;">
+    <strong>Important:</strong> You may run into a sketch is too big error in aruino, to solve this open the Aruino IDE go to tools >> partition scheme and set it to Minimal SPIFFS (1.9MB with OTA/190KB SPIFFS)
+</blockquote>
+
