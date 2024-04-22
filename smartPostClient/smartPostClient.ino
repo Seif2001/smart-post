@@ -6,8 +6,35 @@
  */
 
 #include "BLEDevice.h"
-//#include "BLEScan.h"
 #include "Periphirals.h"
+#include <WiFi.h>
+#include <Firebase_ESP_Client.h>
+#include "addons/TokenHelper.h"
+#include "addons/RTDBHelper.h"
+
+
+#define DHTTYPE DHT11
+#define DHTPIN 4
+#define WIFI_SSID "Tellmywifiloveher"
+#define WIFI_PASS "lion2004"
+#define API_KEY "AIzaSyDoinkaVM6q3GkhKC9HAvUmEgJLOZAm7vw"
+#define DB_URL "https://smart-post-9409b-default-rtdb.asia-southeast1.firebasedatabase.app/"
+
+
+FirebaseData fbdo;
+FirebaseAuth auth;
+FirebaseConfig config;
+
+unsigned long sendDataPrevMillis = 0;
+bool signupOK = false;
+
+
+float t, h, tamp_ble, hum_ble;
+int gas_ble;
+
+DHT dht(DHTPIN, DHT11);
+
+
 
 // The remote service we wish to connect to.
 static BLEUUID serviceUUID("4fafc201-1fb5-459e-8fcc-c5c9c331914b");
@@ -23,37 +50,34 @@ static boolean doScan = false;
 static BLEAdvertisedDevice* myDevice;
 
 BLERemoteCharacteristic *pEMGASCharacterisitic;
-uint32_t gas_ble = 0;
+
 static void notifyCallback(BLERemoteCharacteristic* pBLERemoteCharacteristic, uint8_t* pData, size_t length, bool isNotify) {
   if(pBLERemoteCharacteristic->getUUID().toString() == gasCharUUID.toString()){
     gas_ble = pData[0];
     for(int i =1; i<length; i++){
       gas_ble = gas_ble | pData[i] << i*8;
     }
-    Serial.print("Remote gas: ");
+    Serial.print(F("Remote gas: "));
     Serial.println(gas_ble);
   }
 
   if(pBLERemoteCharacteristic->getUUID().toString() == tempCharUUID.toString()){
-    float tamp_ble = 0.0;
+    tamp_ble = 0.0;
     memcpy(&tamp_ble, pData, sizeof(float));
-    Serial.print("Remote temp: ");
+    Serial.print(F("Remote temp: "));
     Serial.println(tamp_ble);
   }
   if(pBLERemoteCharacteristic->getUUID().toString() == humCharUUID.toString()){
-    float hum_ble = 0.0;
+    hum_ble = 0.0;
     memcpy(&hum_ble, pData, sizeof(float));
-    Serial.print("Remote Humidity: ");
+    Serial.print(F("Remote Humidity: "));
     Serial.println(hum_ble);
   }
-
-
 }
 
 class MyClientCallback : public BLEClientCallbacks {
   void onConnect(BLEClient* pclient) {
   }
-
   void onDisconnect(BLEClient* pclient) {
     connected = false;
     Serial.println("onDisconnect");
@@ -77,7 +101,7 @@ bool connectChar(BLERemoteService *pRemoteService, BLEUUID charUUID){
 }
 
 bool connectToServer() {
-    Serial.print("Forming a connection to ");
+    Serial.print(F("Forming a connection to "));
     Serial.println(myDevice->getAddress().toString().c_str());
     
     BLEClient*  pClient  = BLEDevice::createClient();
@@ -87,7 +111,7 @@ bool connectToServer() {
 
     // Connect to the remove BLE Server.
     pClient->connect(myDevice);  // if you pass BLEAdvertisedDevice instead of address, it will be recognized type of peer device address (public or private)
-    Serial.println(" - Connected to server");
+    Serial.println(F(" - Connected to server"));
     pClient->setMTU(517); //set client to request maximum MTU from server (default is 23 otherwise)
   
     // Obtain a reference to the service we are after in the remote BLE server.
@@ -98,11 +122,7 @@ bool connectToServer() {
       pClient->disconnect();
       return false;
     }
-    Serial.println(" - Found our service");
-
-
-    
-
+    Serial.println(F(" - Found our service"));
     connected = true;
     if(connectChar(pRemoteService, gasCharUUID) == false){
       connected = false;
@@ -129,7 +149,7 @@ class MyAdvertisedDeviceCallbacks: public BLEAdvertisedDeviceCallbacks {
    * Called for each advertising BLE server.
    */
   void onResult(BLEAdvertisedDevice advertisedDevice) {
-    Serial.print("BLE Advertised Device found: ");
+    Serial.print(F("BLE Advertised Device found: "));
     Serial.println(advertisedDevice.toString().c_str());
 
     // We have found a device, let us now see if it contains the service we are looking for.
@@ -149,10 +169,40 @@ class MyAdvertisedDeviceCallbacks: public BLEAdvertisedDeviceCallbacks {
 
 
 void setup() {
-  Serial.begin(115200);
-  Serial.println("Starting Arduino BLE Client application...");
+  setupPeripherals();
+
+  dht.begin();
+  Serial.begin(9600);
+  Serial.println(F("Starting Arduino BLE Client application..."));
   BLEDevice::init("");
 
+  WiFi.begin(WIFI_SSID, WIFI_PASS);
+  Serial.print(F("Connecting"));
+
+  while(WiFi.status()!=WL_CONNECTED){
+    Serial.print(".");
+    delay(300);
+  }
+
+  Serial.println();
+  Serial.print("Connected with IP: ");
+  Serial.println(WiFi.localIP());
+
+  config.api_key = API_KEY;
+  config.database_url = DB_URL;
+
+  if(Firebase.signUp(&config, &auth, "", "")){
+    Serial.println("Signing in OK");
+    signupOK = true;
+  }
+  else{
+    Serial.printf("%s\n", config.signer.signupError.message.c_str());
+  }
+
+  config.token_status_callback = tokenStatusCallback;
+
+  Firebase.begin(&config, &auth);
+  Firebase.reconnectWiFi(true);
   // Retrieve a Scanner and set the callback we want to use to be informed when we
   // have detected a new device.  Specify that we want active scanning and start the
   // scan to run for 5 seconds.
@@ -167,27 +217,26 @@ void setup() {
 
 // This is the Arduino main loop function.
 void loop() {
-
   // If the flag "doConnect" is true then we have scanned for and found the desired
   // BLE Server with which we wish to connect.  Now we connect to it.  Once we are 
   // connected we set the connected flag to be true.
   if (doConnect == true) {
     if (connectToServer()) {
-      Serial.println("We are now connected to the BLE Server.");
+      Serial.println(F("We are now connected to the BLE Server."));
+
     } else {
-      Serial.println("We have failed to connect to the server; there is nothin more we will do.");
+      Serial.println(F("We have failed to connect to the server; there is nothin more we will do."));
     }
     doConnect = false;
   }
-
   // If we are connected to a peer BLE Server, update the characteristic each time we are reached
   // with the current time since boot.
+  int avgGas = 0;
   if (connected) {
     // String newValue = "Time since boot: " + String(millis()/1000);
     // Serial.println("Setting new characteristic value to \"" + newValue + "\"");
-    
     // // Set the characteristic's value to be the array of bytes that is actually a string.
-    int avgGas = (gas_ble + getGas())/2;
+    avgGas = (gas_ble + getGas())/2;
     Serial.println(gas_ble);
     Serial.println(avgGas);
 
@@ -202,7 +251,74 @@ void loop() {
   }else if(doScan){
     BLEDevice::getScan()->start(0);  // this is just example to start scan after disconnect, most likely there is better way to do it in arduino
   }
-  Serial.print("Our gas: ");
-  Serial.println(getGas());
-  delay(1000); // Delay a second between loops.
+  t = dht.readTemperature();
+    //float t = 5.0;
+    float h = dht.readHumidity();
+    if (isnan(h) || isnan(t)) {
+      Serial.println(F("Failed to read from DHT sensor!"));
+      return;
+  }
+  int l = getLight();
+  int g = getGas();
+  Serial.print(F("Our gas: "));
+  Serial.println(g);
+  Serial.print(F("Our Temp: "));
+  Serial.println(t);
+  Serial.print(F("Our Humidity: "));
+  Serial.println(h);
+  Serial.print(F("Our LDR: "));
+  Serial.println(l);
+  checkGas(g);
+  checkEm(avgGas);
+  checkTemp(t,h);
+  checkLDR(l);
+  delay(2000); // Delay a second between loops.
+  if(Firebase.ready()&&signupOK){
+    sendDataPrevMillis = millis();
+    // --------------------------
+    if(Firebase.RTDB.setFloat(&fbdo, "client/temp", t)){
+      Serial.print("Sent client temp in " );
+      Serial.print(fbdo.dataPath());
+      Serial.print(" ");
+      Serial.println(t);
+
+    }
+    if(Firebase.RTDB.setFloat(&fbdo, "client/hum", h)){
+      Serial.print("Sent client humidity in ");
+      Serial.print(fbdo.dataPath());
+      Serial.print(" ");
+      Serial.println(h);
+    }
+    if(Firebase.RTDB.setInt(&fbdo, "client/gas", g)){
+      Serial.print("Sent client gas in ");
+      Serial.print(fbdo.dataPath());
+      Serial.print(" ");
+      Serial.println(g);
+    }
+
+    if(Firebase.RTDB.setFloat(&fbdo, "server/temp", tamp_ble)){
+      Serial.print("Sent client temp in " );
+      Serial.print(fbdo.dataPath());
+      Serial.print(" ");
+      Serial.println(tamp_ble);
+
+    }
+    if(Firebase.RTDB.setFloat(&fbdo, "server/hum", hum_ble)){
+      Serial.print("Sent client humidity in ");
+      Serial.print(fbdo.dataPath());
+      Serial.print(" ");
+      Serial.println(hum_ble);
+    }
+    if(Firebase.RTDB.setInt(&fbdo, "server/gas", gas_ble)){
+      Serial.print("Sent client gas in ");
+      Serial.print(fbdo.dataPath());
+      Serial.print(" ");
+      Serial.println(gas_ble);
+    }
+
+  }
 } // End of loop
+
+
+
+

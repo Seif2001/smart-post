@@ -5,30 +5,28 @@
 #define DHTPIN 25
 #define MQPIN 34
 #define LDRPIN 14
-#define LDRLEDPIN 5
+#define LDRLEDPIN 32
 #define REDLEDPIN 15
 #define GREENLEDPIN 22
 #define BLUELEDPIN 23
-#define BUZZPIN 5
+#define BUZZPIN 18
 #define RED 1
 #define BLUE 2
 #define GREEN 3
 #define EMPIN 26
 #define DHTTYPE DHT11
 
-DHT dht(DHTPIN, DHT11);
 
 
 
 
 void setupPeripherals(){
-  pinMode(REDLEDPIN,   OUTPUT);
-    pinMode(GREENLEDPIN, OUTPUT);
-    pinMode(BLUELEDPIN,  OUTPUT);
-    pinMode(EMPIN,  OUTPUT);
-
     pinMode(LDRLEDPIN,OUTPUT);
-    dht.begin();
+  pinMode(REDLEDPIN,   OUTPUT);
+  pinMode(GREENLEDPIN, OUTPUT);
+  pinMode(BLUELEDPIN,  OUTPUT);
+  pinMode(BUZZPIN,OUTPUT);
+  pinMode(EMPIN,OUTPUT);
 }
 void lightEmergency(bool on){
   if(on){
@@ -37,24 +35,6 @@ void lightEmergency(bool on){
   else{
     digitalWrite(EMPIN,LOW);
   }
-}
-float getTemp(){
-
-float t = dht.readTemperature();
-if (isnan(t)) {
-  Serial.println(F("Failed to read!"));
-  return -1.0;
-}
-return t;
-}
-
-float getHumidity(){
-  float h = dht.readHumidity();
-  if (isnan(h)) {
-    Serial.println(F("Failed to read!"));
-    return -1.0;
-  }
-  return h;
 }
 
 int getGas(){
@@ -105,7 +85,7 @@ void checkTemp(float temperature, float humidity){
 }
 
 void checkLDR(int LDRAnalog){
-  if(LDRAnalog < 0.4*4095){ //dont forget its active low (range is from 0-4095)
+  if(LDRAnalog == 0){ //dont forget its active low (range is from 0-4095)
     Serial.println("Room is Light");
     lightLed(false);
   }
@@ -118,21 +98,29 @@ void checkLDR(int LDRAnalog){
 
 void rgbLED(int rgb){
   if(rgb == RED){
-    analogWrite(REDLEDPIN,   255);
-    analogWrite(BLUELEDPIN,   0);
-    analogWrite(GREENLEDPIN,   0);
+    digitalWrite(REDLEDPIN, HIGH);
+    digitalWrite(BLUELEDPIN, LOW);
+    digitalWrite(GREENLEDPIN, LOW);
+
+
   }else if(rgb == BLUE){
-    analogWrite(REDLEDPIN,   0);
-    analogWrite(BLUELEDPIN,   255);
-    analogWrite(GREENLEDPIN,   0);
+    digitalWrite(REDLEDPIN, LOW);
+    digitalWrite(BLUELEDPIN, HIGH);
+    digitalWrite(GREENLEDPIN, LOW);
   }else if(rgb == GREEN){
-    analogWrite(REDLEDPIN,   0);
-    analogWrite(BLUELEDPIN,   0);
-    analogWrite(GREENLEDPIN,   255);
-  }else{
-    analogWrite(REDLEDPIN,   0);
-    analogWrite(BLUELEDPIN,   0);
-    analogWrite(GREENLEDPIN,   0);
+    digitalWrite(REDLEDPIN, LOW);
+    digitalWrite(BLUELEDPIN, LOW);
+    digitalWrite(GREENLEDPIN, HIGH);
+  }
+}
+void checkGas(int gas){
+  if(gas<=400){
+    rgbLED(GREEN);
+  }else if(gas>400 && gas<1000){
+    rgbLED(BLUE);
+  }
+  else{
+    rgbLED(RED);
   }
 }
 

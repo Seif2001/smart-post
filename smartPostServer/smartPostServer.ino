@@ -19,6 +19,7 @@
    A connect hander associated with the server starts a background task that performs notification
    every couple of seconds.
 */
+
 #include <BLEDevice.h>
 #include <BLEServer.h>
 #include <BLEUtils.h>
@@ -41,6 +42,11 @@ uint32_t value = 0;
 #define EMGAS_CHARACTERISTIC_UUID "1e10fc9d-609a-4347-bd5c-4e9f3f9340c6"
 #define TEMP_CHARACTERISTIC_UUID "e3a16c97-4ddd-4876-b528-d96534ed15ad"
 #define HUM_CHARACTERISTIC_UUID "34aec8a6-b476-4f3d-8b5f-b3f45d54f61a"
+#define DHTTYPE DHT11
+#define DHTPIN 4
+
+
+DHT dht(DHTPIN, DHT11);
 
 
 
@@ -144,21 +150,36 @@ void notifyAll(float h, float t, int gas){
 }
 
 void setup() {
+  dht.begin();
+
   setupPeripherals();
-  Serial.begin(115200);
+  Serial.begin(9600);
   setupBLE();
 }
 
+
 void loop() {
-    float t = getTemp();
-    float h = getHumidity();
+    dht.begin();
+
+    float t = dht.readTemperature();
+    //float t = 5.0;
+    float h = dht.readHumidity();
+    if (isnan(h) || isnan(t)) {
+      Serial.println(F("Failed to read from DHT sensor!"));
+      return;
+    }
     int g = getGas();
+    int l = getLight();
+    checkLDR(l);
+    checkGas(g);
     Serial.print("Gas: ");
     Serial.println(g);
     Serial.print("Temp: ");
     Serial.println(t);
     Serial.print("Humidity: ");
     Serial.println(h);
-    delay(1000);
+    checkTemp(t, h);
+
+    delay(2000);
     notifyAll(h, t, g);
 }
