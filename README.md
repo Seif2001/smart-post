@@ -25,4 +25,29 @@ A Smart Lamppost System (SLS) using ESP32 microcontrollers and the Cooja simulat
    
    The datasheet can be viewed [here](https://www.mouser.com/datasheet/2/758/DHT11-Technical-Data-Sheet-Translated-Version-1143054.pdf)
 
-   
+   ## Libraries used in Aruino IDE
+   ### Client
+
+   1. **Adafruit Unified Sensor by Adafruit**
+      Dependency for DHT sensor library
+   2. **DHT sensor Library by AdaFruit**
+      Responsible for interfacing the DHT sensor
+   3. **Firebase Arduino Client Library for ESP8266 and ESP32 by Mobzit**
+      Responsible for connecting and sending data to the fire base server
+      
+    ### Server
+   1. **Adafruit Unified Sensor by Adafruit**
+      Dependency for DHT sensor library
+   2. **DHT sensor Library by AdaFruit**
+      Responsible for interfacing the DHT sensor
+
+   ## Steps to Run
+   ### Server First
+   1. Connect circuit and connect to computer via thunderbolt cable
+   2. Install server libraries
+   3. Run code
+   ### Then Client
+   1. Connect circuit and connect to computer via thunderbolt cable
+   2. Install server libraries
+   3. Open hotspot and type your ssid and password in WIFI_SSID and WIFI_PASS fields
+   4. Run code
