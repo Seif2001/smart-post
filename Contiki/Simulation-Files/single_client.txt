@@ -1,0 +1,1262 @@
+00:00.360	ID:2	Rime started with address 0.0.0.0.0.0.0.2
+00:00.373	ID:2	MAC 00:00:00:00:00:00:00:02 Contiki-2.6-900-ga6227e1 started. Node id is set to 2.
+00:00.382	ID:2	nullmac nullrdc, channel check rate 128 Hz, radio channel 26
+00:00.393	ID:2	Tentative link-local IPv6 address fe80:0000:0000:0000:0200:0000:0000:0002
+00:00.401	ID:2	Starting 'sense' 'DNS resolver' 'UDP client process'
+00:00.405	ID:2	UDP client process started
+00:00.410	ID:2	Client IPv6 addresses: aaaa::200:0:0:2
+00:00.412	ID:2	fe80::200:0:0:2
+00:00.419	ID:2	Attempting to look up contiki-udp-server.local
+00:00.506	ID:1	Rime started with address 0.0.0.0.0.0.0.1
+00:00.519	ID:1	MAC 00:00:00:00:00:00:00:01 Contiki-2.6-900-ga6227e1 started. Node id is set to 1.
+00:00.528	ID:1	nullmac nullrdc, channel check rate 128 Hz, radio channel 26
+00:00.539	ID:1	Tentative link-local IPv6 address fe80:0000:0000:0000:0200:0000:0000:0001
+00:00.546	ID:1	Starting 'sense' 'DNS resolver' 'UDP server process'
+00:00.549	ID:1	UDP server started
+00:00.555	ID:1	Server IPv6 addresses: aaaa::200:0:0:1
+00:00.557	ID:1	fe80::200:0:0:1
+00:01.728	ID:2	Still looking up "contiki-udp-server.local"...
+00:01.874	ID:2	Lookup of "contiki-udp-server.local" succeded!
+00:01.885	ID:2	Created a connection with the server fe80::200:0:0:1 local/remote port 3001/3000
+03:21.896	ID:2	Client sending to: fe80::200:0:0:1temperature 0 humidity 0 light 0 gas 0
+06:41.903	ID:2	Client sending to: fe80::200:0:0:1temperature 0 humidity 0 light 0 gas 0
+10:01.911	ID:2	Client sending to: fe80::200:0:0:1temperature 0 humidity 0 light 0 gas 0
+10:01.923	ID:1	Server received values: 0,0,0,0 from fe80::200:0:0:2
+10:01.927	ID:1	Server sensors: T 0 H 0 L 0 G 0
+10:01.938	ID:1	Responding with message: avgtemperature 0 avghumidity 0 avglight 0 avggas 0
+10:01.944	ID:1	Signals after wait time: T 0 H 0 L 0 G 0
+10:01.946	ID:1	buzzer off!
+10:01.946	ID:1	safe!
+10:01.949	ID:1	LIGHT LED: OFF
+10:01.959	ID:2	average values from server: 0, 0, 0, 0'
+10:01.961	ID:2	buzzer off!
+10:01.961	ID:2	safe!
+10:01.964	ID:2	LIGHT LED: OFF
+13:21.919	ID:2	Client sending to: fe80::200:0:0:1temperature 0 humidity 0 light 0 gas 0
+16:41.928	ID:2	Client sending to: fe80::200:0:0:1temperature 248 humidity 52 light 4416 gas 884
+16:41.941	ID:1	Server received values: 248,52,4416,884 from fe80::200:0:0:2
+16:41.947	ID:1	Server sensors: T 80 H 96 L 3272 G 3648
+16:41.959	ID:1	Responding with message: avgtemperature 164 avghumidity 74 avglight 3844 avggas 2266
+16:41.966	ID:1	Signals after wait time: T 164 H 74 L 3844 G 2266
+16:41.968	ID:1	buzzer on!
+16:41.969	ID:1	DANGER!
+16:41.971	ID:1	LIGHT LED: ON
+16:41.983	ID:2	average values from server: 164, 74, 3844, 2266'
+16:41.984	ID:2	buzzer on!
+16:41.985	ID:2	DANGER!
+16:41.987	ID:2	LIGHT LED: ON
+20:01.944	ID:2	Client sending to: fe80::200:0:0:1temperature 248 humidity 52 light 4416 gas 884
+23:21.959	ID:2	Client sending to: fe80::200:0:0:1temperature 248 humidity 52 light 4416 gas 884
+26:41.975	ID:2	Client sending to: fe80::200:0:0:1temperature 248 humidity 52 light 4416 gas 884
+26:41.988	ID:1	Server received values: 248,52,4416,884 from fe80::200:0:0:2
+26:41.994	ID:1	Server sensors: T 80 H 96 L 3272 G 3648
+26:42.006	ID:1	Responding with message: avgtemperature 164 avghumidity 74 avglight 3844 avggas 2266
+26:42.013	ID:1	Signals after wait time: T 164 H 74 L 3844 G 2266
+26:42.015	ID:1	buzzer on!
+26:42.016	ID:1	DANGER!
+26:42.018	ID:1	LIGHT LED: ON
+26:42.030	ID:2	average values from server: 164, 74, 3844, 2266'
+26:42.031	ID:2	buzzer on!
+26:42.032	ID:2	DANGER!
+26:42.034	ID:2	LIGHT LED: ON
+30:01.991	ID:2	Client sending to: fe80::200:0:0:1temperature 248 humidity 52 light 4416 gas 884
+33:22.006	ID:2	Client sending to: fe80::200:0:0:1temperature 88 humidity 72 light 400 gas 924
+33:22.019	ID:1	Server received values: 88,72,400,924 from fe80::200:0:0:2
+33:22.024	ID:1	Server sensors: T 368 H 16 L 3764 G 4092
+33:22.037	ID:1	Responding with message: avgtemperature 228 avghumidity 44 avglight 2082 avggas 2508
+33:22.044	ID:1	Signals after wait time: T 228 H 44 L 2082 G 2508
+33:22.045	ID:1	buzzer on!
+33:22.046	ID:1	DANGER!
+33:22.048	ID:1	LIGHT LED: OFF
+33:22.061	ID:2	average values from server: 228, 44, 2082, 2508'
+33:22.062	ID:2	buzzer on!
+33:22.063	ID:2	DANGER!
+33:22.065	ID:2	LIGHT LED: OFF
+36:42.022	ID:2	Client sending to: fe80::200:0:0:1temperature 88 humidity 72 light 400 gas 924
+40:02.037	ID:2	Client sending to: fe80::200:0:0:1temperature 88 humidity 72 light 400 gas 924
+43:22.053	ID:2	Client sending to: fe80::200:0:0:1temperature 88 humidity 72 light 400 gas 924
+43:22.066	ID:1	Server received values: 88,72,400,924 from fe80::200:0:0:2
+43:22.071	ID:1	Server sensors: T 368 H 16 L 3764 G 4092
+43:22.084	ID:1	Responding with message: avgtemperature 228 avghumidity 44 avglight 2082 avggas 2508
+43:22.091	ID:1	Signals after wait time: T 228 H 44 L 2082 G 2508
+43:22.092	ID:1	buzzer on!
+43:22.093	ID:1	DANGER!
+43:22.095	ID:1	LIGHT LED: OFF
+43:22.107	ID:2	average values from server: 228, 44, 2082, 2508'
+43:22.109	ID:2	buzzer on!
+43:22.110	ID:2	DANGER!
+43:22.112	ID:2	LIGHT LED: OFF
+46:42.068	ID:2	Client sending to: fe80::200:0:0:1temperature 88 humidity 72 light 400 gas 924
+50:02.085	ID:2	Client sending to: fe80::200:0:0:1temperature 352 humidity 60 light 2008 gas 4480
+50:02.098	ID:1	Server received values: 352,60,2008,4480 from fe80::200:0:0:2
+50:02.104	ID:1	Server sensors: T 336 H 84 L 2964 G 2184
+50:02.116	ID:1	Responding with message: avgtemperature 344 avghumidity 72 avglight 2486 avggas 3332
+50:02.123	ID:1	Signals after wait time: T 344 H 72 L 2486 G 3332
+50:02.124	ID:1	buzzer on!
+50:02.126	ID:1	DANGER!
+50:02.128	ID:1	LIGHT LED: OFF
+50:02.140	ID:2	average values from server: 344, 72, 2486, 3332'
+50:02.141	ID:2	buzzer on!
+50:02.142	ID:2	DANGER!
+50:02.144	ID:2	LIGHT LED: OFF
+53:22.100	ID:2	Client sending to: fe80::200:0:0:1temperature 352 humidity 60 light 2008 gas 4480
+56:42.116	ID:2	Client sending to: fe80::200:0:0:1temperature 352 humidity 60 light 2008 gas 4480
+1:00:02.131	ID:2	Client sending to: fe80::200:0:0:1temperature 352 humidity 60 light 2008 gas 4480
+1:00:02.145	ID:1	Server received values: 352,60,2008,4480 from fe80::200:0:0:2
+1:00:02.150	ID:1	Server sensors: T 336 H 84 L 2964 G 2184
+1:00:02.163	ID:1	Responding with message: avgtemperature 344 avghumidity 72 avglight 2486 avggas 3332
+1:00:02.170	ID:1	Signals after wait time: T 344 H 72 L 2486 G 3332
+1:00:02.171	ID:1	buzzer on!
+1:00:02.172	ID:1	DANGER!
+1:00:02.174	ID:1	LIGHT LED: OFF
+1:00:02.187	ID:2	average values from server: 344, 72, 2486, 3332'
+1:00:02.188	ID:2	buzzer on!
+1:00:02.189	ID:2	DANGER!
+1:00:02.191	ID:2	LIGHT LED: OFF
+1:03:22.147	ID:2	Client sending to: fe80::200:0:0:1temperature 352 humidity 60 light 2008 gas 4480
+1:06:42.163	ID:2	Client sending to: fe80::200:0:0:1temperature 192 humidity 64 light 3128 gas 1016
+1:06:42.176	ID:1	Server received values: 192,64,3128,1016 from fe80::200:0:0:2
+1:06:42.182	ID:1	Server sensors: T 328 H 80 L 2196 G 3464
+1:06:42.194	ID:1	Responding with message: avgtemperature 260 avghumidity 72 avglight 2662 avggas 2240
+1:06:42.201	ID:1	Signals after wait time: T 260 H 72 L 2662 G 2240
+1:06:42.203	ID:1	buzzer on!
+1:06:42.204	ID:1	DANGER!
+1:06:42.206	ID:1	LIGHT LED: OFF
+1:06:42.218	ID:2	average values from server: 260, 72, 2662, 2240'
+1:06:42.219	ID:2	buzzer on!
+1:06:42.220	ID:2	DANGER!
+1:06:42.223	ID:2	LIGHT LED: OFF
+1:10:02.178	ID:2	Client sending to: fe80::200:0:0:1temperature 192 humidity 64 light 3128 gas 1016
+1:13:22.194	ID:2	Client sending to: fe80::200:0:0:1temperature 192 humidity 64 light 3128 gas 1016
+1:16:42.210	ID:2	Client sending to: fe80::200:0:0:1temperature 192 humidity 64 light 3128 gas 1016
+1:16:42.223	ID:1	Server received values: 192,64,3128,1016 from fe80::200:0:0:2
+1:16:42.229	ID:1	Server sensors: T 328 H 80 L 2196 G 3464
+1:16:42.241	ID:1	Responding with message: avgtemperature 260 avghumidity 72 avglight 2662 avggas 2240
+1:16:42.248	ID:1	Signals after wait time: T 260 H 72 L 2662 G 2240
+1:16:42.249	ID:1	buzzer on!
+1:16:42.251	ID:1	DANGER!
+1:16:42.253	ID:1	LIGHT LED: OFF
+1:16:42.265	ID:2	average values from server: 260, 72, 2662, 2240'
+1:16:42.266	ID:2	buzzer on!
+1:16:42.267	ID:2	DANGER!
+1:16:42.269	ID:2	LIGHT LED: OFF
+1:20:02.225	ID:2	Client sending to: fe80::200:0:0:1temperature 192 humidity 64 light 3128 gas 1016
+1:23:22.240	ID:2	Client sending to: fe80::200:0:0:1temperature 48 humidity 16 light 144 gas 2924
+1:23:22.253	ID:1	Server received values: 48,16,144,2924 from fe80::200:0:0:2
+1:23:22.259	ID:1	Server sensors: T 168 H 4 L 3744 G 112
+1:23:22.271	ID:1	Responding with message: avgtemperature 108 avghumidity 10 avglight 1944 avggas 1518
+1:23:22.278	ID:1	Signals after wait time: T 108 H 10 L 1944 G 1518
+1:23:22.280	ID:1	buzzer off!
+1:23:22.281	ID:1	DANGER!
+1:23:22.283	ID:1	LIGHT LED: OFF
+1:23:22.295	ID:2	average values from server: 108, 10, 1944, 1518'
+1:23:22.297	ID:2	buzzer off!
+1:23:22.298	ID:2	DANGER!
+1:23:22.300	ID:2	LIGHT LED: OFF
+1:26:42.256	ID:2	Client sending to: fe80::200:0:0:1temperature 48 humidity 16 light 144 gas 2924
+1:30:02.272	ID:2	Client sending to: fe80::200:0:0:1temperature 48 humidity 16 light 144 gas 2924
+1:33:22.287	ID:2	Client sending to: fe80::200:0:0:1temperature 48 humidity 16 light 144 gas 2924
+1:33:22.300	ID:1	Server received values: 48,16,144,2924 from fe80::200:0:0:2
+1:33:22.306	ID:1	Server sensors: T 168 H 4 L 3744 G 112
+1:33:22.318	ID:1	Responding with message: avgtemperature 108 avghumidity 10 avglight 1944 avggas 1518
+1:33:22.325	ID:1	Signals after wait time: T 108 H 10 L 1944 G 1518
+1:33:22.327	ID:1	buzzer off!
+1:33:22.328	ID:1	DANGER!
+1:33:22.330	ID:1	LIGHT LED: OFF
+1:33:22.342	ID:2	average values from server: 108, 10, 1944, 1518'
+1:33:22.344	ID:2	buzzer off!
+1:33:22.345	ID:2	DANGER!
+1:33:22.347	ID:2	LIGHT LED: OFF
+1:36:42.303	ID:2	Client sending to: fe80::200:0:0:1temperature 48 humidity 16 light 144 gas 2924
+1:40:02.319	ID:2	Client sending to: fe80::200:0:0:1temperature 384 humidity 16 light 2972 gas 424
+1:40:02.332	ID:1	Server received values: 384,16,2972,424 from fe80::200:0:0:2
+1:40:02.338	ID:1	Server sensors: T 80 H 44 L 4364 G 3920
+1:40:02.350	ID:1	Responding with message: avgtemperature 232 avghumidity 30 avglight 3668 avggas 2172
+1:40:02.357	ID:1	Signals after wait time: T 232 H 30 L 3668 G 2172
+1:40:02.358	ID:1	buzzer off!
+1:40:02.360	ID:1	DANGER!
+1:40:02.361	ID:1	LIGHT LED: ON
+1:40:02.374	ID:2	average values from server: 232, 30, 3668, 2172'
+1:40:02.375	ID:2	buzzer off!
+1:40:02.376	ID:2	DANGER!
+1:40:02.378	ID:2	LIGHT LED: ON
+1:43:22.334	ID:2	Client sending to: fe80::200:0:0:1temperature 384 humidity 16 light 2972 gas 424
+1:46:42.350	ID:2	Client sending to: fe80::200:0:0:1temperature 384 humidity 16 light 2972 gas 424
+1:50:02.366	ID:2	Client sending to: fe80::200:0:0:1temperature 384 humidity 16 light 2972 gas 424
+1:50:02.379	ID:1	Server received values: 384,16,2972,424 from fe80::200:0:0:2
+1:50:02.384	ID:1	Server sensors: T 80 H 44 L 4364 G 3920
+1:50:02.397	ID:1	Responding with message: avgtemperature 232 avghumidity 30 avglight 3668 avggas 2172
+1:50:02.404	ID:1	Signals after wait time: T 232 H 30 L 3668 G 2172
+1:50:02.405	ID:1	buzzer off!
+1:50:02.406	ID:1	DANGER!
+1:50:02.408	ID:1	LIGHT LED: ON
+1:50:02.420	ID:2	average values from server: 232, 30, 3668, 2172'
+1:50:02.422	ID:2	buzzer off!
+1:50:02.423	ID:2	DANGER!
+1:50:02.425	ID:2	LIGHT LED: ON
+1:53:22.381	ID:2	Client sending to: fe80::200:0:0:1temperature 384 humidity 16 light 2972 gas 424
+1:56:42.397	ID:2	Client sending to: fe80::200:0:0:1temperature 384 humidity 4 light 972 gas 112
+1:56:42.409	ID:1	Server received values: 384,4,972,112 from fe80::200:0:0:2
+1:56:42.415	ID:1	Server sensors: T 32 H 0 L 4168 G 600
+1:56:42.427	ID:1	Responding with message: avgtemperature 208 avghumidity 2 avglight 2570 avggas 356
+1:56:42.433	ID:1	Signals after wait time: T 208 H 2 L 2570 G 356
+1:56:42.435	ID:1	buzzer off!
+1:56:42.436	ID:1	safe!
+1:56:42.438	ID:1	LIGHT LED: OFF
+1:56:42.450	ID:2	average values from server: 208, 2, 2570, 356'
+1:56:42.451	ID:2	buzzer off!
+1:56:42.452	ID:2	safe!
+1:56:42.454	ID:2	LIGHT LED: OFF
+2:00:02.412	ID:2	Client sending to: fe80::200:0:0:1temperature 384 humidity 4 light 972 gas 112
+2:03:22.428	ID:2	Client sending to: fe80::200:0:0:1temperature 384 humidity 4 light 972 gas 112
+2:06:42.443	ID:2	Client sending to: fe80::200:0:0:1temperature 384 humidity 4 light 972 gas 112
+2:06:42.456	ID:1	Server received values: 384,4,972,112 from fe80::200:0:0:2
+2:06:42.462	ID:1	Server sensors: T 32 H 0 L 4168 G 600
+2:06:42.474	ID:1	Responding with message: avgtemperature 208 avghumidity 2 avglight 2570 avggas 356
+2:06:42.480	ID:1	Signals after wait time: T 208 H 2 L 2570 G 356
+2:06:42.482	ID:1	buzzer off!
+2:06:42.483	ID:1	safe!
+2:06:42.485	ID:1	LIGHT LED: OFF
+2:06:42.497	ID:2	average values from server: 208, 2, 2570, 356'
+2:06:42.498	ID:2	buzzer off!
+2:06:42.499	ID:2	safe!
+2:06:42.501	ID:2	LIGHT LED: OFF
+2:10:02.459	ID:2	Client sending to: fe80::200:0:0:1temperature 384 humidity 4 light 972 gas 112
+2:13:22.475	ID:2	Client sending to: fe80::200:0:0:1temperature 80 humidity 44 light 4364 gas 3920
+2:13:22.488	ID:1	Server received values: 80,44,4364,3920 from fe80::200:0:0:2
+2:13:22.494	ID:1	Server sensors: T 240 H 84 L 4024 G 3584
+2:13:22.506	ID:1	Responding with message: avgtemperature 160 avghumidity 64 avglight 4194 avggas 3752
+2:13:22.513	ID:1	Signals after wait time: T 160 H 64 L 4194 G 3752
+2:13:22.515	ID:1	buzzer on!
+2:13:22.516	ID:1	DANGER!
+2:13:22.518	ID:1	LIGHT LED: ON
+2:13:22.530	ID:2	average values from server: 160, 64, 4194, 3752'
+2:13:22.531	ID:2	buzzer on!
+2:13:22.532	ID:2	DANGER!
+2:13:22.534	ID:2	LIGHT LED: ON
+2:16:42.491	ID:2	Client sending to: fe80::200:0:0:1temperature 80 humidity 44 light 4364 gas 3920
+2:20:02.506	ID:2	Client sending to: fe80::200:0:0:1temperature 80 humidity 44 light 4364 gas 3920
+2:23:22.522	ID:2	Client sending to: fe80::200:0:0:1temperature 80 humidity 44 light 4364 gas 3920
+2:23:22.535	ID:1	Server received values: 80,44,4364,3920 from fe80::200:0:0:2
+2:23:22.541	ID:1	Server sensors: T 240 H 84 L 4024 G 3584
+2:23:22.553	ID:1	Responding with message: avgtemperature 160 avghumidity 64 avglight 4194 avggas 3752
+2:23:22.560	ID:1	Signals after wait time: T 160 H 64 L 4194 G 3752
+2:23:22.562	ID:1	buzzer on!
+2:23:22.563	ID:1	DANGER!
+2:23:22.565	ID:1	LIGHT LED: ON
+2:23:22.577	ID:2	average values from server: 160, 64, 4194, 3752'
+2:23:22.578	ID:2	buzzer on!
+2:23:22.579	ID:2	DANGER!
+2:23:22.581	ID:2	LIGHT LED: ON
+2:26:42.537	ID:2	Client sending to: fe80::200:0:0:1temperature 80 humidity 44 light 4364 gas 3920
+2:30:02.553	ID:2	Client sending to: fe80::200:0:0:1temperature 32 humidity 0 light 4168 gas 600
+2:30:02.566	ID:1	Server received values: 32,0,4168,600 from fe80::200:0:0:2
+2:30:02.571	ID:1	Server sensors: T 312 H 68 L 972 G 4292
+2:30:02.584	ID:1	Responding with message: avgtemperature 172 avghumidity 34 avglight 2570 avggas 2446
+2:30:02.590	ID:1	Signals after wait time: T 172 H 34 L 2570 G 2446
+2:30:02.592	ID:1	buzzer off!
+2:30:02.593	ID:1	DANGER!
+2:30:02.595	ID:1	LIGHT LED: OFF
+2:30:02.607	ID:2	average values from server: 172, 34, 2570, 2446'
+2:30:02.609	ID:2	buzzer off!
+2:30:02.610	ID:2	DANGER!
+2:30:02.612	ID:2	LIGHT LED: OFF
+2:33:22.568	ID:2	Client sending to: fe80::200:0:0:1temperature 32 humidity 0 light 4168 gas 600
+2:36:42.584	ID:2	Client sending to: fe80::200:0:0:1temperature 32 humidity 0 light 4168 gas 600
+2:40:02.600	ID:2	Client sending to: fe80::200:0:0:1temperature 32 humidity 0 light 4168 gas 600
+2:40:02.613	ID:1	Server received values: 32,0,4168,600 from fe80::200:0:0:2
+2:40:02.618	ID:1	Server sensors: T 312 H 68 L 972 G 4292
+2:40:02.630	ID:1	Responding with message: avgtemperature 172 avghumidity 34 avglight 2570 avggas 2446
+2:40:02.637	ID:1	Signals after wait time: T 172 H 34 L 2570 G 2446
+2:40:02.639	ID:1	buzzer off!
+2:40:02.640	ID:1	DANGER!
+2:40:02.642	ID:1	LIGHT LED: OFF
+2:40:02.654	ID:2	average values from server: 172, 34, 2570, 2446'
+2:40:02.656	ID:2	buzzer off!
+2:40:02.657	ID:2	DANGER!
+2:40:02.659	ID:2	LIGHT LED: OFF
+2:43:22.615	ID:2	Client sending to: fe80::200:0:0:1temperature 32 humidity 0 light 4168 gas 600
+2:46:42.631	ID:2	Client sending to: fe80::200:0:0:1temperature 240 humidity 84 light 4024 gas 3584
+2:46:42.645	ID:1	Server received values: 240,84,4024,3584 from fe80::200:0:0:2
+2:46:42.650	ID:1	Server sensors: T 264 H 16 L 1628 G 984
+2:46:42.663	ID:1	Responding with message: avgtemperature 252 avghumidity 50 avglight 2826 avggas 2284
+2:46:42.670	ID:1	Signals after wait time: T 252 H 50 L 2826 G 2284
+2:46:42.671	ID:1	buzzer on!
+2:46:42.672	ID:1	DANGER!
+2:46:42.674	ID:1	LIGHT LED: ON
+2:46:42.686	ID:2	average values from server: 252, 50, 2826, 2284'
+2:46:42.688	ID:2	buzzer on!
+2:46:42.689	ID:2	DANGER!
+2:46:42.691	ID:2	LIGHT LED: ON
+2:50:02.647	ID:2	Client sending to: fe80::200:0:0:1temperature 240 humidity 84 light 4024 gas 3584
+2:53:22.663	ID:2	Client sending to: fe80::200:0:0:1temperature 240 humidity 84 light 4024 gas 3584
+2:56:42.678	ID:2	Client sending to: fe80::200:0:0:1temperature 240 humidity 84 light 4024 gas 3584
+2:56:42.692	ID:1	Server received values: 240,84,4024,3584 from fe80::200:0:0:2
+2:56:42.697	ID:1	Server sensors: T 264 H 16 L 1628 G 984
+2:56:42.710	ID:1	Responding with message: avgtemperature 252 avghumidity 50 avglight 2826 avggas 2284
+2:56:42.716	ID:1	Signals after wait time: T 252 H 50 L 2826 G 2284
+2:56:42.718	ID:1	buzzer on!
+2:56:42.719	ID:1	DANGER!
+2:56:42.721	ID:1	LIGHT LED: ON
+2:56:42.733	ID:2	average values from server: 252, 50, 2826, 2284'
+2:56:42.735	ID:2	buzzer on!
+2:56:42.736	ID:2	DANGER!
+2:56:42.738	ID:2	LIGHT LED: ON
+3:00:02.694	ID:2	Client sending to: fe80::200:0:0:1temperature 240 humidity 84 light 4024 gas 3584
+3:03:22.709	ID:2	Client sending to: fe80::200:0:0:1temperature 312 humidity 68 light 972 gas 4292
+3:03:22.723	ID:1	Server received values: 312,68,972,4292 from fe80::200:0:0:2
+3:03:22.728	ID:1	Server sensors: T 16 H 12 L 2060 G 1960
+3:03:22.740	ID:1	Responding with message: avgtemperature 164 avghumidity 40 avglight 1516 avggas 3126
+3:03:22.747	ID:1	Signals after wait time: T 164 H 40 L 1516 G 3126
+3:03:22.749	ID:1	buzzer on!
+3:03:22.750	ID:1	DANGER!
+3:03:22.752	ID:1	LIGHT LED: OFF
+3:03:22.764	ID:2	average values from server: 164, 40, 1516, 3126'
+3:03:22.766	ID:2	buzzer on!
+3:03:22.767	ID:2	DANGER!
+3:03:22.769	ID:2	LIGHT LED: OFF
+3:06:42.725	ID:2	Client sending to: fe80::200:0:0:1temperature 312 humidity 68 light 972 gas 4292
+3:10:02.741	ID:2	Client sending to: fe80::200:0:0:1temperature 312 humidity 68 light 972 gas 4292
+3:13:22.756	ID:2	Client sending to: fe80::200:0:0:1temperature 312 humidity 68 light 972 gas 4292
+3:13:22.769	ID:1	Server received values: 312,68,972,4292 from fe80::200:0:0:2
+3:13:22.775	ID:1	Server sensors: T 16 H 12 L 2060 G 1960
+3:13:22.787	ID:1	Responding with message: avgtemperature 164 avghumidity 40 avglight 1516 avggas 3126
+3:13:22.794	ID:1	Signals after wait time: T 164 H 40 L 1516 G 3126
+3:13:22.796	ID:1	buzzer on!
+3:13:22.797	ID:1	DANGER!
+3:13:22.799	ID:1	LIGHT LED: OFF
+3:13:22.811	ID:2	average values from server: 164, 40, 1516, 3126'
+3:13:22.813	ID:2	buzzer on!
+3:13:22.814	ID:2	DANGER!
+3:13:22.816	ID:2	LIGHT LED: OFF
+3:16:42.772	ID:2	Client sending to: fe80::200:0:0:1temperature 312 humidity 68 light 972 gas 4292
+3:20:02.787	ID:2	Client sending to: fe80::200:0:0:1temperature 264 humidity 16 light 1628 gas 984
+3:20:02.801	ID:1	Server received values: 264,16,1628,984 from fe80::200:0:0:2
+3:20:02.806	ID:1	Server sensors: T 176 H 40 L 216 G 1928
+3:20:02.818	ID:1	Responding with message: avgtemperature 220 avghumidity 28 avglight 922 avggas 1456
+3:20:02.825	ID:1	Signals after wait time: T 220 H 28 L 922 G 1456
+3:20:02.827	ID:1	buzzer off!
+3:20:02.828	ID:1	DANGER!
+3:20:02.830	ID:1	LIGHT LED: OFF
+3:20:02.842	ID:2	average values from server: 220, 28, 922, 1456'
+3:20:02.844	ID:2	buzzer off!
+3:20:02.845	ID:2	DANGER!
+3:20:02.847	ID:2	LIGHT LED: OFF
+3:23:22.803	ID:2	Client sending to: fe80::200:0:0:1temperature 264 humidity 16 light 1628 gas 984
+3:26:42.819	ID:2	Client sending to: fe80::200:0:0:1temperature 264 humidity 16 light 1628 gas 984
+3:30:02.834	ID:2	Client sending to: fe80::200:0:0:1temperature 264 humidity 16 light 1628 gas 984
+3:30:02.848	ID:1	Server received values: 264,16,1628,984 from fe80::200:0:0:2
+3:30:02.853	ID:1	Server sensors: T 176 H 40 L 216 G 1928
+3:30:02.865	ID:1	Responding with message: avgtemperature 220 avghumidity 28 avglight 922 avggas 1456
+3:30:02.872	ID:1	Signals after wait time: T 220 H 28 L 922 G 1456
+3:30:02.874	ID:1	buzzer off!
+3:30:02.875	ID:1	DANGER!
+3:30:02.877	ID:1	LIGHT LED: OFF
+3:30:02.889	ID:2	average values from server: 220, 28, 922, 1456'
+3:30:02.891	ID:2	buzzer off!
+3:30:02.892	ID:2	DANGER!
+3:30:02.894	ID:2	LIGHT LED: OFF
+3:33:22.850	ID:2	Client sending to: fe80::200:0:0:1temperature 264 humidity 16 light 1628 gas 984
+3:36:42.866	ID:2	Client sending to: fe80::200:0:0:1temperature 16 humidity 12 light 2060 gas 1960
+3:36:42.879	ID:1	Server received values: 16,12,2060,1960 from fe80::200:0:0:2
+3:36:42.884	ID:1	Server sensors: T 320 H 64 L 4112 G 716
+3:36:42.897	ID:1	Responding with message: avgtemperature 168 avghumidity 38 avglight 3086 avggas 1338
+3:36:42.904	ID:1	Signals after wait time: T 168 H 38 L 3086 G 1338
+3:36:42.905	ID:1	buzzer off!
+3:36:42.906	ID:1	DANGER!
+3:36:42.908	ID:1	LIGHT LED: ON
+3:36:42.920	ID:2	average values from server: 168, 38, 3086, 1338'
+3:36:42.922	ID:2	buzzer off!
+3:36:42.923	ID:2	DANGER!
+3:36:42.925	ID:2	LIGHT LED: ON
+3:40:02.881	ID:2	Client sending to: fe80::200:0:0:1temperature 16 humidity 12 light 2060 gas 1960
+3:43:22.897	ID:2	Client sending to: fe80::200:0:0:1temperature 16 humidity 12 light 2060 gas 1960
+3:46:42.912	ID:2	Client sending to: fe80::200:0:0:1temperature 16 humidity 12 light 2060 gas 1960
+3:46:42.926	ID:1	Server received values: 16,12,2060,1960 from fe80::200:0:0:2
+3:46:42.931	ID:1	Server sensors: T 320 H 64 L 4112 G 716
+3:46:42.944	ID:1	Responding with message: avgtemperature 168 avghumidity 38 avglight 3086 avggas 1338
+3:46:42.951	ID:1	Signals after wait time: T 168 H 38 L 3086 G 1338
+3:46:42.952	ID:1	buzzer off!
+3:46:42.953	ID:1	DANGER!
+3:46:42.955	ID:1	LIGHT LED: ON
+3:46:42.967	ID:2	average values from server: 168, 38, 3086, 1338'
+3:46:42.969	ID:2	buzzer off!
+3:46:42.970	ID:2	DANGER!
+3:46:42.972	ID:2	LIGHT LED: ON
+3:50:02.928	ID:2	Client sending to: fe80::200:0:0:1temperature 16 humidity 12 light 2060 gas 1960
+3:53:22.944	ID:2	Client sending to: fe80::200:0:0:1temperature 176 humidity 40 light 216 gas 1928
+3:53:22.957	ID:1	Server received values: 176,40,216,1928 from fe80::200:0:0:2
+3:53:22.962	ID:1	Server sensors: T 40 H 20 L 2156 G 4452
+3:53:22.975	ID:1	Responding with message: avgtemperature 108 avghumidity 30 avglight 1186 avggas 3190
+3:53:22.982	ID:1	Signals after wait time: T 108 H 30 L 1186 G 3190
+3:53:22.983	ID:1	buzzer off!
+3:53:22.985	ID:1	DANGER!
+3:53:22.987	ID:1	LIGHT LED: OFF
+3:53:22.999	ID:2	average values from server: 108, 30, 1186, 3190'
+3:53:23.000	ID:2	buzzer off!
+3:53:23.002	ID:2	DANGER!
+3:53:23.004	ID:2	LIGHT LED: OFF
+3:56:42.959	ID:2	Client sending to: fe80::200:0:0:1temperature 176 humidity 40 light 216 gas 1928
+4:00:02.975	ID:2	Client sending to: fe80::200:0:0:1temperature 176 humidity 40 light 216 gas 1928
+4:03:22.991	ID:2	Client sending to: fe80::200:0:0:1temperature 176 humidity 40 light 216 gas 1928
+4:03:23.004	ID:1	Server received values: 176,40,216,1928 from fe80::200:0:0:2
+4:03:23.009	ID:1	Server sensors: T 40 H 20 L 2156 G 4452
+4:03:23.022	ID:1	Responding with message: avgtemperature 108 avghumidity 30 avglight 1186 avggas 3190
+4:03:23.029	ID:1	Signals after wait time: T 108 H 30 L 1186 G 3190
+4:03:23.030	ID:1	buzzer off!
+4:03:23.031	ID:1	DANGER!
+4:03:23.033	ID:1	LIGHT LED: OFF
+4:03:23.046	ID:2	average values from server: 108, 30, 1186, 3190'
+4:03:23.047	ID:2	buzzer off!
+4:03:23.048	ID:2	DANGER!
+4:03:23.050	ID:2	LIGHT LED: OFF
+4:06:43.006	ID:2	Client sending to: fe80::200:0:0:1temperature 176 humidity 40 light 216 gas 1928
+4:10:03.022	ID:2	Client sending to: fe80::200:0:0:1temperature 320 humidity 64 light 4112 gas 716
+4:10:03.035	ID:1	Server received values: 320,64,4112,716 from fe80::200:0:0:2
+4:10:03.041	ID:1	Server sensors: T 288 H 72 L 2212 G 3924
+4:10:03.053	ID:1	Responding with message: avgtemperature 304 avghumidity 68 avglight 3162 avggas 2320
+4:10:03.060	ID:1	Signals after wait time: T 304 H 68 L 3162 G 2320
+4:10:03.062	ID:1	buzzer on!
+4:10:03.063	ID:1	DANGER!
+4:10:03.065	ID:1	LIGHT LED: ON
+4:10:03.077	ID:2	average values from server: 304, 68, 3162, 2320'
+4:10:03.078	ID:2	buzzer on!
+4:10:03.079	ID:2	DANGER!
+4:10:03.081	ID:2	LIGHT LED: ON
+4:13:23.037	ID:2	Client sending to: fe80::200:0:0:1temperature 320 humidity 64 light 4112 gas 716
+4:16:43.053	ID:2	Client sending to: fe80::200:0:0:1temperature 320 humidity 64 light 4112 gas 716
+4:20:03.069	ID:2	Client sending to: fe80::200:0:0:1temperature 320 humidity 64 light 4112 gas 716
+4:20:03.082	ID:1	Server received values: 320,64,4112,716 from fe80::200:0:0:2
+4:20:03.088	ID:1	Server sensors: T 288 H 72 L 2212 G 3924
+4:20:03.100	ID:1	Responding with message: avgtemperature 304 avghumidity 68 avglight 3162 avggas 2320
+4:20:03.107	ID:1	Signals after wait time: T 304 H 68 L 3162 G 2320
+4:20:03.108	ID:1	buzzer on!
+4:20:03.110	ID:1	DANGER!
+4:20:03.111	ID:1	LIGHT LED: ON
+4:20:03.124	ID:2	average values from server: 304, 68, 3162, 2320'
+4:20:03.125	ID:2	buzzer on!
+4:20:03.126	ID:2	DANGER!
+4:20:03.128	ID:2	LIGHT LED: ON
+4:23:23.084	ID:2	Client sending to: fe80::200:0:0:1temperature 320 humidity 64 light 4112 gas 716
+4:26:43.100	ID:2	Client sending to: fe80::200:0:0:1temperature 40 humidity 20 light 2156 gas 4452
+4:26:43.113	ID:1	Server received values: 40,20,2156,4452 from fe80::200:0:0:2
+4:26:43.118	ID:1	Server sensors: T 32 H 92 L 992 G 88
+4:26:43.130	ID:1	Responding with message: avgtemperature 36 avghumidity 56 avglight 1574 avggas 2270
+4:26:43.137	ID:1	Signals after wait time: T 36 H 56 L 1574 G 2270
+4:26:43.139	ID:1	buzzer on!
+4:26:43.140	ID:1	DANGER!
+4:26:43.142	ID:1	LIGHT LED: OFF
+4:26:43.154	ID:2	average values from server: 36, 56, 1574, 2270'
+4:26:43.155	ID:2	buzzer on!
+4:26:43.157	ID:2	DANGER!
+4:26:43.159	ID:2	LIGHT LED: OFF
+4:30:03.116	ID:2	Client sending to: fe80::200:0:0:1temperature 40 humidity 20 light 2156 gas 4452
+4:33:23.131	ID:2	Client sending to: fe80::200:0:0:1temperature 40 humidity 20 light 2156 gas 4452
+4:36:43.147	ID:2	Client sending to: fe80::200:0:0:1temperature 40 humidity 20 light 2156 gas 4452
+4:36:43.160	ID:1	Server received values: 40,20,2156,4452 from fe80::200:0:0:2
+4:36:43.165	ID:1	Server sensors: T 32 H 92 L 992 G 88
+4:36:43.177	ID:1	Responding with message: avgtemperature 36 avghumidity 56 avglight 1574 avggas 2270
+4:36:43.184	ID:1	Signals after wait time: T 36 H 56 L 1574 G 2270
+4:36:43.186	ID:1	buzzer on!
+4:36:43.187	ID:1	DANGER!
+4:36:43.189	ID:1	LIGHT LED: OFF
+4:36:43.201	ID:2	average values from server: 36, 56, 1574, 2270'
+4:36:43.202	ID:2	buzzer on!
+4:36:43.203	ID:2	DANGER!
+4:36:43.206	ID:2	LIGHT LED: OFF
+4:40:03.162	ID:2	Client sending to: fe80::200:0:0:1temperature 40 humidity 20 light 2156 gas 4452
+4:43:23.178	ID:2	Client sending to: fe80::200:0:0:1temperature 288 humidity 72 light 2212 gas 3924
+4:43:23.192	ID:1	Server received values: 288,72,2212,3924 from fe80::200:0:0:2
+4:43:23.197	ID:1	Server sensors: T 336 H 92 L 1288 G 88
+4:43:23.209	ID:1	Responding with message: avgtemperature 312 avghumidity 82 avglight 1750 avggas 2006
+4:43:23.216	ID:1	Signals after wait time: T 312 H 82 L 1750 G 2006
+4:43:23.218	ID:1	buzzer on!
+4:43:23.219	ID:1	DANGER!
+4:43:23.221	ID:1	LIGHT LED: OFF
+4:43:23.233	ID:2	average values from server: 312, 82, 1750, 2006'
+4:43:23.235	ID:2	buzzer on!
+4:43:23.236	ID:2	DANGER!
+4:43:23.238	ID:2	LIGHT LED: OFF
+4:46:43.194	ID:2	Client sending to: fe80::200:0:0:1temperature 288 humidity 72 light 2212 gas 3924
+4:50:03.210	ID:2	Client sending to: fe80::200:0:0:1temperature 288 humidity 72 light 2212 gas 3924
+4:53:23.225	ID:2	Client sending to: fe80::200:0:0:1temperature 288 humidity 72 light 2212 gas 3924
+4:53:23.239	ID:1	Server received values: 288,72,2212,3924 from fe80::200:0:0:2
+4:53:23.244	ID:1	Server sensors: T 336 H 92 L 1288 G 88
+4:53:23.256	ID:1	Responding with message: avgtemperature 312 avghumidity 82 avglight 1750 avggas 2006
+4:53:23.263	ID:1	Signals after wait time: T 312 H 82 L 1750 G 2006
+4:53:23.265	ID:1	buzzer on!
+4:53:23.266	ID:1	DANGER!
+4:53:23.268	ID:1	LIGHT LED: OFF
+4:53:23.280	ID:2	average values from server: 312, 82, 1750, 2006'
+4:53:23.282	ID:2	buzzer on!
+4:53:23.283	ID:2	DANGER!
+4:53:23.285	ID:2	LIGHT LED: OFF
+4:56:43.241	ID:2	Client sending to: fe80::200:0:0:1temperature 288 humidity 72 light 2212 gas 3924
+5:00:03.256	ID:2	Client sending to: fe80::200:0:0:1temperature 32 humidity 92 light 992 gas 88
+5:00:03.268	ID:1	Server received values: 32,92,992,88 from fe80::200:0:0:2
+5:00:03.274	ID:1	Server sensors: T 96 H 80 L 1248 G 4252
+5:00:03.286	ID:1	Responding with message: avgtemperature 64 avghumidity 86 avglight 1120 avggas 2170
+5:00:03.293	ID:1	Signals after wait time: T 64 H 86 L 1120 G 2170
+5:00:03.294	ID:1	buzzer on!
+5:00:03.296	ID:1	DANGER!
+5:00:03.298	ID:1	LIGHT LED: OFF
+5:00:03.310	ID:2	average values from server: 64, 86, 1120, 2170'
+5:00:03.311	ID:2	buzzer on!
+5:00:03.312	ID:2	DANGER!
+5:00:03.314	ID:2	LIGHT LED: OFF
+5:03:23.271	ID:2	Client sending to: fe80::200:0:0:1temperature 32 humidity 92 light 992 gas 88
+5:06:43.287	ID:2	Client sending to: fe80::200:0:0:1temperature 32 humidity 92 light 992 gas 88
+5:10:03.303	ID:2	Client sending to: fe80::200:0:0:1temperature 32 humidity 92 light 992 gas 88
+5:10:03.315	ID:1	Server received values: 32,92,992,88 from fe80::200:0:0:2
+5:10:03.321	ID:1	Server sensors: T 96 H 80 L 1248 G 4252
+5:10:03.333	ID:1	Responding with message: avgtemperature 64 avghumidity 86 avglight 1120 avggas 2170
+5:10:03.340	ID:1	Signals after wait time: T 64 H 86 L 1120 G 2170
+5:10:03.341	ID:1	buzzer on!
+5:10:03.342	ID:1	DANGER!
+5:10:03.345	ID:1	LIGHT LED: OFF
+5:10:03.356	ID:2	average values from server: 64, 86, 1120, 2170'
+5:10:03.358	ID:2	buzzer on!
+5:10:03.359	ID:2	DANGER!
+5:10:03.361	ID:2	LIGHT LED: OFF
+5:13:23.318	ID:2	Client sending to: fe80::200:0:0:1temperature 32 humidity 92 light 992 gas 88
+5:16:43.334	ID:2	Client sending to: fe80::200:0:0:1temperature 336 humidity 92 light 1288 gas 88
+5:16:43.347	ID:1	Server received values: 336,92,1288,88 from fe80::200:0:0:2
+5:16:43.353	ID:1	Server sensors: T 16 H 64 L 60 G 3032
+5:16:43.365	ID:1	Responding with message: avgtemperature 176 avghumidity 78 avglight 674 avggas 1560
+5:16:43.371	ID:1	Signals after wait time: T 176 H 78 L 674 G 1560
+5:16:43.373	ID:1	buzzer on!
+5:16:43.374	ID:1	DANGER!
+5:16:43.376	ID:1	LIGHT LED: OFF
+5:16:43.388	ID:2	average values from server: 176, 78, 674, 1560'
+5:16:43.390	ID:2	buzzer on!
+5:16:43.391	ID:2	DANGER!
+5:16:43.393	ID:2	LIGHT LED: OFF
+5:20:03.350	ID:2	Client sending to: fe80::200:0:0:1temperature 336 humidity 92 light 1288 gas 88
+5:23:23.365	ID:2	Client sending to: fe80::200:0:0:1temperature 336 humidity 92 light 1288 gas 88
+5:26:43.381	ID:2	Client sending to: fe80::200:0:0:1temperature 336 humidity 92 light 1288 gas 88
+5:26:43.394	ID:1	Server received values: 336,92,1288,88 from fe80::200:0:0:2
+5:26:43.399	ID:1	Server sensors: T 16 H 64 L 60 G 3032
+5:26:43.412	ID:1	Responding with message: avgtemperature 176 avghumidity 78 avglight 674 avggas 1560
+5:26:43.418	ID:1	Signals after wait time: T 176 H 78 L 674 G 1560
+5:26:43.420	ID:1	buzzer on!
+5:26:43.421	ID:1	DANGER!
+5:26:43.423	ID:1	LIGHT LED: OFF
+5:26:43.435	ID:2	average values from server: 176, 78, 674, 1560'
+5:26:43.437	ID:2	buzzer on!
+5:26:43.438	ID:2	DANGER!
+5:26:43.440	ID:2	LIGHT LED: OFF
+5:30:03.397	ID:2	Client sending to: fe80::200:0:0:1temperature 336 humidity 92 light 1288 gas 88
+5:33:23.412	ID:2	Client sending to: fe80::200:0:0:1temperature 96 humidity 80 light 1248 gas 4252
+5:33:23.426	ID:1	Server received values: 96,80,1248,4252 from fe80::200:0:0:2
+5:33:23.431	ID:1	Server sensors: T 352 H 28 L 3376 G 432
+5:33:23.444	ID:1	Responding with message: avgtemperature 224 avghumidity 54 avglight 2312 avggas 2342
+5:33:23.451	ID:1	Signals after wait time: T 224 H 54 L 2312 G 2342
+5:33:23.452	ID:1	buzzer on!
+5:33:23.453	ID:1	DANGER!
+5:33:23.455	ID:1	LIGHT LED: OFF
+5:33:23.467	ID:2	average values from server: 224, 54, 2312, 2342'
+5:33:23.469	ID:2	buzzer on!
+5:33:23.470	ID:2	DANGER!
+5:33:23.472	ID:2	LIGHT LED: OFF
+5:36:43.428	ID:2	Client sending to: fe80::200:0:0:1temperature 96 humidity 80 light 1248 gas 4252
+5:40:03.444	ID:2	Client sending to: fe80::200:0:0:1temperature 96 humidity 80 light 1248 gas 4252
+5:43:23.459	ID:2	Client sending to: fe80::200:0:0:1temperature 96 humidity 80 light 1248 gas 4252
+5:43:23.473	ID:1	Server received values: 96,80,1248,4252 from fe80::200:0:0:2
+5:43:23.478	ID:1	Server sensors: T 352 H 28 L 3376 G 432
+5:43:23.490	ID:1	Responding with message: avgtemperature 224 avghumidity 54 avglight 2312 avggas 2342
+5:43:23.497	ID:1	Signals after wait time: T 224 H 54 L 2312 G 2342
+5:43:23.499	ID:1	buzzer on!
+5:43:23.500	ID:1	DANGER!
+5:43:23.502	ID:1	LIGHT LED: OFF
+5:43:23.514	ID:2	average values from server: 224, 54, 2312, 2342'
+5:43:23.516	ID:2	buzzer on!
+5:43:23.517	ID:2	DANGER!
+5:43:23.519	ID:2	LIGHT LED: OFF
+5:46:43.475	ID:2	Client sending to: fe80::200:0:0:1temperature 96 humidity 80 light 1248 gas 4252
+5:50:03.490	ID:2	Client sending to: fe80::200:0:0:1temperature 16 humidity 64 light 60 gas 3032
+5:50:03.503	ID:1	Server received values: 16,64,60,3032 from fe80::200:0:0:2
+5:50:03.509	ID:1	Server sensors: T 352 H 72 L 328 G 2124
+5:50:03.521	ID:1	Responding with message: avgtemperature 184 avghumidity 68 avglight 194 avggas 2578
+5:50:03.528	ID:1	Signals after wait time: T 184 H 68 L 194 G 2578
+5:50:03.529	ID:1	buzzer on!
+5:50:03.530	ID:1	DANGER!
+5:50:03.532	ID:1	LIGHT LED: OFF
+5:50:03.544	ID:2	average values from server: 184, 68, 194, 2578'
+5:50:03.546	ID:2	buzzer on!
+5:50:03.547	ID:2	DANGER!
+5:50:03.549	ID:2	LIGHT LED: OFF
+5:53:23.506	ID:2	Client sending to: fe80::200:0:0:1temperature 16 humidity 64 light 60 gas 3032
+5:56:43.522	ID:2	Client sending to: fe80::200:0:0:1temperature 16 humidity 64 light 60 gas 3032
+6:00:03.537	ID:2	Client sending to: fe80::200:0:0:1temperature 16 humidity 64 light 60 gas 3032
+6:00:03.550	ID:1	Server received values: 16,64,60,3032 from fe80::200:0:0:2
+6:00:03.556	ID:1	Server sensors: T 352 H 72 L 328 G 2124
+6:00:03.568	ID:1	Responding with message: avgtemperature 184 avghumidity 68 avglight 194 avggas 2578
+6:00:03.575	ID:1	Signals after wait time: T 184 H 68 L 194 G 2578
+6:00:03.576	ID:1	buzzer on!
+6:00:03.577	ID:1	DANGER!
+6:00:03.579	ID:1	LIGHT LED: OFF
+6:00:03.591	ID:2	average values from server: 184, 68, 194, 2578'
+6:00:03.593	ID:2	buzzer on!
+6:00:03.594	ID:2	DANGER!
+6:00:03.596	ID:2	LIGHT LED: OFF
+6:03:23.553	ID:2	Client sending to: fe80::200:0:0:1temperature 16 humidity 64 light 60 gas 3032
+6:06:43.569	ID:2	Client sending to: fe80::200:0:0:1temperature 352 humidity 28 light 3376 gas 432
+6:06:43.582	ID:1	Server received values: 352,28,3376,432 from fe80::200:0:0:2
+6:06:43.588	ID:1	Server sensors: T 192 H 72 L 2912 G 3344
+6:06:43.600	ID:1	Responding with message: avgtemperature 272 avghumidity 50 avglight 3144 avggas 1888
+6:06:43.607	ID:1	Signals after wait time: T 272 H 50 L 3144 G 1888
+6:06:43.608	ID:1	buzzer on!
+6:06:43.610	ID:1	DANGER!
+6:06:43.611	ID:1	LIGHT LED: ON
+6:06:43.624	ID:2	average values from server: 272, 50, 3144, 1888'
+6:06:43.625	ID:2	buzzer on!
+6:06:43.626	ID:2	DANGER!
+6:06:43.628	ID:2	LIGHT LED: ON
+6:10:03.584	ID:2	Client sending to: fe80::200:0:0:1temperature 352 humidity 28 light 3376 gas 432
+6:13:23.600	ID:2	Client sending to: fe80::200:0:0:1temperature 352 humidity 28 light 3376 gas 432
+6:16:43.616	ID:2	Client sending to: fe80::200:0:0:1temperature 352 humidity 28 light 3376 gas 432
+6:16:43.629	ID:1	Server received values: 352,28,3376,432 from fe80::200:0:0:2
+6:16:43.635	ID:1	Server sensors: T 192 H 72 L 2912 G 3344
+6:16:43.647	ID:1	Responding with message: avgtemperature 272 avghumidity 50 avglight 3144 avggas 1888
+6:16:43.654	ID:1	Signals after wait time: T 272 H 50 L 3144 G 1888
+6:16:43.655	ID:1	buzzer on!
+6:16:43.656	ID:1	DANGER!
+6:16:43.658	ID:1	LIGHT LED: ON
+6:16:43.670	ID:2	average values from server: 272, 50, 3144, 1888'
+6:16:43.672	ID:2	buzzer on!
+6:16:43.673	ID:2	DANGER!
+6:16:43.675	ID:2	LIGHT LED: ON
+6:20:03.631	ID:2	Client sending to: fe80::200:0:0:1temperature 352 humidity 28 light 3376 gas 432
+6:23:23.647	ID:2	Client sending to: fe80::200:0:0:1temperature 352 humidity 72 light 328 gas 2124
+6:23:23.660	ID:1	Server received values: 352,72,328,2124 from fe80::200:0:0:2
+6:23:23.666	ID:1	Server sensors: T 232 H 68 L 2176 G 1592
+6:23:23.678	ID:1	Responding with message: avgtemperature 292 avghumidity 70 avglight 1252 avggas 1858
+6:23:23.685	ID:1	Signals after wait time: T 292 H 70 L 1252 G 1858
+6:23:23.687	ID:1	buzzer on!
+6:23:23.688	ID:1	DANGER!
+6:23:23.690	ID:1	LIGHT LED: OFF
+6:23:23.702	ID:2	average values from server: 292, 70, 1252, 1858'
+6:23:23.703	ID:2	buzzer on!
+6:23:23.705	ID:2	DANGER!
+6:23:23.707	ID:2	LIGHT LED: OFF
+6:26:43.662	ID:2	Client sending to: fe80::200:0:0:1temperature 352 humidity 72 light 328 gas 2124
+6:30:03.678	ID:2	Client sending to: fe80::200:0:0:1temperature 352 humidity 72 light 328 gas 2124
+6:33:23.694	ID:2	Client sending to: fe80::200:0:0:1temperature 352 humidity 72 light 328 gas 2124
+6:33:23.707	ID:1	Server received values: 352,72,328,2124 from fe80::200:0:0:2
+6:33:23.713	ID:1	Server sensors: T 232 H 68 L 2176 G 1592
+6:33:23.725	ID:1	Responding with message: avgtemperature 292 avghumidity 70 avglight 1252 avggas 1858
+6:33:23.732	ID:1	Signals after wait time: T 292 H 70 L 1252 G 1858
+6:33:23.733	ID:1	buzzer on!
+6:33:23.735	ID:1	DANGER!
+6:33:23.737	ID:1	LIGHT LED: OFF
+6:33:23.749	ID:2	average values from server: 292, 70, 1252, 1858'
+6:33:23.750	ID:2	buzzer on!
+6:33:23.751	ID:2	DANGER!
+6:33:23.753	ID:2	LIGHT LED: OFF
+6:36:43.709	ID:2	Client sending to: fe80::200:0:0:1temperature 352 humidity 72 light 328 gas 2124
+6:40:03.725	ID:2	Client sending to: fe80::200:0:0:1temperature 192 humidity 72 light 2912 gas 3344
+6:40:03.739	ID:1	Server received values: 192,72,2912,3344 from fe80::200:0:0:2
+6:40:03.744	ID:1	Server sensors: T 304 H 92 L 936 G 3248
+6:40:03.756	ID:1	Responding with message: avgtemperature 248 avghumidity 82 avglight 1924 avggas 3296
+6:40:03.763	ID:1	Signals after wait time: T 248 H 82 L 1924 G 3296
+6:40:03.765	ID:1	buzzer on!
+6:40:03.766	ID:1	DANGER!
+6:40:03.768	ID:1	LIGHT LED: OFF
+6:40:03.780	ID:2	average values from server: 248, 82, 1924, 3296'
+6:40:03.782	ID:2	buzzer on!
+6:40:03.783	ID:2	DANGER!
+6:40:03.785	ID:2	LIGHT LED: OFF
+6:43:23.741	ID:2	Client sending to: fe80::200:0:0:1temperature 192 humidity 72 light 2912 gas 3344
+6:46:43.756	ID:2	Client sending to: fe80::200:0:0:1temperature 192 humidity 72 light 2912 gas 3344
+6:50:03.772	ID:2	Client sending to: fe80::200:0:0:1temperature 192 humidity 72 light 2912 gas 3344
+6:50:03.785	ID:1	Server received values: 192,72,2912,3344 from fe80::200:0:0:2
+6:50:03.791	ID:1	Server sensors: T 304 H 92 L 936 G 3248
+6:50:03.803	ID:1	Responding with message: avgtemperature 248 avghumidity 82 avglight 1924 avggas 3296
+6:50:03.810	ID:1	Signals after wait time: T 248 H 82 L 1924 G 3296
+6:50:03.812	ID:1	buzzer on!
+6:50:03.813	ID:1	DANGER!
+6:50:03.815	ID:1	LIGHT LED: OFF
+6:50:03.827	ID:2	average values from server: 248, 82, 1924, 3296'
+6:50:03.829	ID:2	buzzer on!
+6:50:03.830	ID:2	DANGER!
+6:50:03.832	ID:2	LIGHT LED: OFF
+6:53:23.788	ID:2	Client sending to: fe80::200:0:0:1temperature 192 humidity 72 light 2912 gas 3344
+6:56:43.803	ID:2	Client sending to: fe80::200:0:0:1temperature 232 humidity 68 light 2176 gas 1592
+6:56:43.817	ID:1	Server received values: 232,68,2176,1592 from fe80::200:0:0:2
+6:56:43.822	ID:1	Server sensors: T 176 H 52 L 1516 G 3576
+6:56:43.835	ID:1	Responding with message: avgtemperature 204 avghumidity 60 avglight 1846 avggas 2584
+6:56:43.842	ID:1	Signals after wait time: T 204 H 60 L 1846 G 2584
+6:56:43.843	ID:1	buzzer on!
+6:56:43.844	ID:1	DANGER!
+6:56:43.846	ID:1	LIGHT LED: OFF
+6:56:43.858	ID:2	average values from server: 204, 60, 1846, 2584'
+6:56:43.860	ID:2	buzzer on!
+6:56:43.861	ID:2	DANGER!
+6:56:43.863	ID:2	LIGHT LED: OFF
+7:00:03.819	ID:2	Client sending to: fe80::200:0:0:1temperature 232 humidity 68 light 2176 gas 1592
+7:03:23.835	ID:2	Client sending to: fe80::200:0:0:1temperature 232 humidity 68 light 2176 gas 1592
+7:06:43.850	ID:2	Client sending to: fe80::200:0:0:1temperature 232 humidity 68 light 2176 gas 1592
+7:06:43.864	ID:1	Server received values: 232,68,2176,1592 from fe80::200:0:0:2
+7:06:43.869	ID:1	Server sensors: T 176 H 52 L 1516 G 3576
+7:06:43.882	ID:1	Responding with message: avgtemperature 204 avghumidity 60 avglight 1846 avggas 2584
+7:06:43.889	ID:1	Signals after wait time: T 204 H 60 L 1846 G 2584
+7:06:43.890	ID:1	buzzer on!
+7:06:43.891	ID:1	DANGER!
+7:06:43.893	ID:1	LIGHT LED: OFF
+7:06:43.905	ID:2	average values from server: 204, 60, 1846, 2584'
+7:06:43.907	ID:2	buzzer on!
+7:06:43.908	ID:2	DANGER!
+7:06:43.910	ID:2	LIGHT LED: OFF
+7:10:03.866	ID:2	Client sending to: fe80::200:0:0:1temperature 232 humidity 68 light 2176 gas 1592
+7:13:23.881	ID:2	Client sending to: fe80::200:0:0:1temperature 304 humidity 92 light 936 gas 3248
+7:13:23.894	ID:1	Server received values: 304,92,936,3248 from fe80::200:0:0:2
+7:13:23.900	ID:1	Server sensors: T 144 H 12 L 3124 G 160
+7:13:23.912	ID:1	Responding with message: avgtemperature 224 avghumidity 52 avglight 2030 avggas 1704
+7:13:23.919	ID:1	Signals after wait time: T 224 H 52 L 2030 G 1704
+7:13:23.921	ID:1	buzzer on!
+7:13:23.922	ID:1	DANGER!
+7:13:23.924	ID:1	LIGHT LED: OFF
+7:13:23.936	ID:2	average values from server: 224, 52, 2030, 1704'
+7:13:23.938	ID:2	buzzer on!
+7:13:23.939	ID:2	DANGER!
+7:13:23.941	ID:2	LIGHT LED: OFF
+7:16:43.897	ID:2	Client sending to: fe80::200:0:0:1temperature 304 humidity 92 light 936 gas 3248
+7:20:03.912	ID:2	Client sending to: fe80::200:0:0:1temperature 304 humidity 92 light 936 gas 3248
+7:23:23.928	ID:2	Client sending to: fe80::200:0:0:1temperature 304 humidity 92 light 936 gas 3248
+7:23:23.941	ID:1	Server received values: 304,92,936,3248 from fe80::200:0:0:2
+7:23:23.947	ID:1	Server sensors: T 144 H 12 L 3124 G 160
+7:23:23.959	ID:1	Responding with message: avgtemperature 224 avghumidity 52 avglight 2030 avggas 1704
+7:23:23.966	ID:1	Signals after wait time: T 224 H 52 L 2030 G 1704
+7:23:23.968	ID:1	buzzer on!
+7:23:23.969	ID:1	DANGER!
+7:23:23.971	ID:1	LIGHT LED: OFF
+7:23:23.983	ID:2	average values from server: 224, 52, 2030, 1704'
+7:23:23.985	ID:2	buzzer on!
+7:23:23.986	ID:2	DANGER!
+7:23:23.988	ID:2	LIGHT LED: OFF
+7:26:43.944	ID:2	Client sending to: fe80::200:0:0:1temperature 304 humidity 92 light 936 gas 3248
+7:30:03.960	ID:2	Client sending to: fe80::200:0:0:1temperature 176 humidity 52 light 1516 gas 3576
+7:30:03.973	ID:1	Server received values: 176,52,1516,3576 from fe80::200:0:0:2
+7:30:03.979	ID:1	Server sensors: T 208 H 96 L 2620 G 4220
+7:30:03.991	ID:1	Responding with message: avgtemperature 192 avghumidity 74 avglight 2068 avggas 3898
+7:30:03.998	ID:1	Signals after wait time: T 192 H 74 L 2068 G 3898
+7:30:03.999	ID:1	buzzer on!
+7:30:04.001	ID:1	DANGER!
+7:30:04.003	ID:1	LIGHT LED: OFF
+7:30:04.015	ID:2	average values from server: 192, 74, 2068, 3898'
+7:30:04.016	ID:2	buzzer on!
+7:30:04.017	ID:2	DANGER!
+7:30:04.019	ID:2	LIGHT LED: OFF
+7:33:23.975	ID:2	Client sending to: fe80::200:0:0:1temperature 176 humidity 52 light 1516 gas 3576
+7:36:43.991	ID:2	Client sending to: fe80::200:0:0:1temperature 176 humidity 52 light 1516 gas 3576
+7:40:04.006	ID:2	Client sending to: fe80::200:0:0:1temperature 176 humidity 52 light 1516 gas 3576
+7:40:04.020	ID:1	Server received values: 176,52,1516,3576 from fe80::200:0:0:2
+7:40:04.025	ID:1	Server sensors: T 208 H 96 L 2620 G 4220
+7:40:04.038	ID:1	Responding with message: avgtemperature 192 avghumidity 74 avglight 2068 avggas 3898
+7:40:04.045	ID:1	Signals after wait time: T 192 H 74 L 2068 G 3898
+7:40:04.046	ID:1	buzzer on!
+7:40:04.047	ID:1	DANGER!
+7:40:04.049	ID:1	LIGHT LED: OFF
+7:40:04.062	ID:2	average values from server: 192, 74, 2068, 3898'
+7:40:04.063	ID:2	buzzer on!
+7:40:04.064	ID:2	DANGER!
+7:40:04.066	ID:2	LIGHT LED: OFF
+7:43:24.022	ID:2	Client sending to: fe80::200:0:0:1temperature 176 humidity 52 light 1516 gas 3576
+7:46:44.037	ID:2	Client sending to: fe80::200:0:0:1temperature 144 humidity 12 light 3124 gas 160
+7:46:44.051	ID:1	Server received values: 144,12,3124,160 from fe80::200:0:0:2
+7:46:44.056	ID:1	Server sensors: T 320 H 96 L 2260 G 2220
+7:46:44.069	ID:1	Responding with message: avgtemperature 232 avghumidity 54 avglight 2692 avggas 1190
+7:46:44.076	ID:1	Signals after wait time: T 232 H 54 L 2692 G 1190
+7:46:44.077	ID:1	buzzer on!
+7:46:44.078	ID:1	DANGER!
+7:46:44.080	ID:1	LIGHT LED: OFF
+7:46:44.092	ID:2	average values from server: 232, 54, 2692, 1190'
+7:46:44.094	ID:2	buzzer on!
+7:46:44.095	ID:2	DANGER!
+7:46:44.097	ID:2	LIGHT LED: OFF
+7:50:04.053	ID:2	Client sending to: fe80::200:0:0:1temperature 144 humidity 12 light 3124 gas 160
+7:53:24.069	ID:2	Client sending to: fe80::200:0:0:1temperature 144 humidity 12 light 3124 gas 160
+7:56:44.084	ID:2	Client sending to: fe80::200:0:0:1temperature 144 humidity 12 light 3124 gas 160
+7:56:44.098	ID:1	Server received values: 144,12,3124,160 from fe80::200:0:0:2
+7:56:44.103	ID:1	Server sensors: T 320 H 96 L 2260 G 2220
+7:56:44.116	ID:1	Responding with message: avgtemperature 232 avghumidity 54 avglight 2692 avggas 1190
+7:56:44.123	ID:1	Signals after wait time: T 232 H 54 L 2692 G 1190
+7:56:44.124	ID:1	buzzer on!
+7:56:44.125	ID:1	DANGER!
+7:56:44.127	ID:1	LIGHT LED: OFF
+7:56:44.139	ID:2	average values from server: 232, 54, 2692, 1190'
+7:56:44.141	ID:2	buzzer on!
+7:56:44.142	ID:2	DANGER!
+7:56:44.144	ID:2	LIGHT LED: OFF
+8:00:04.100	ID:2	Client sending to: fe80::200:0:0:1temperature 144 humidity 12 light 3124 gas 160
+8:03:24.116	ID:2	Client sending to: fe80::200:0:0:1temperature 208 humidity 96 light 2620 gas 4220
+8:03:24.129	ID:1	Server received values: 208,96,2620,4220 from fe80::200:0:0:2
+8:03:24.135	ID:1	Server sensors: T 64 H 80 L 2232 G 3156
+8:03:24.147	ID:1	Responding with message: avgtemperature 136 avghumidity 88 avglight 2426 avggas 3688
+8:03:24.154	ID:1	Signals after wait time: T 136 H 88 L 2426 G 3688
+8:03:24.156	ID:1	buzzer on!
+8:03:24.157	ID:1	DANGER!
+8:03:24.159	ID:1	LIGHT LED: OFF
+8:03:24.171	ID:2	average values from server: 136, 88, 2426, 3688'
+8:03:24.172	ID:2	buzzer on!
+8:03:24.173	ID:2	DANGER!
+8:03:24.176	ID:2	LIGHT LED: OFF
+8:06:44.131	ID:2	Client sending to: fe80::200:0:0:1temperature 208 humidity 96 light 2620 gas 4220
+8:10:04.147	ID:2	Client sending to: fe80::200:0:0:1temperature 208 humidity 96 light 2620 gas 4220
+8:13:24.163	ID:2	Client sending to: fe80::200:0:0:1temperature 208 humidity 96 light 2620 gas 4220
+8:13:24.176	ID:1	Server received values: 208,96,2620,4220 from fe80::200:0:0:2
+8:13:24.182	ID:1	Server sensors: T 64 H 80 L 2232 G 3156
+8:13:24.194	ID:1	Responding with message: avgtemperature 136 avghumidity 88 avglight 2426 avggas 3688
+8:13:24.201	ID:1	Signals after wait time: T 136 H 88 L 2426 G 3688
+8:13:24.202	ID:1	buzzer on!
+8:13:24.204	ID:1	DANGER!
+8:13:24.206	ID:1	LIGHT LED: OFF
+8:13:24.218	ID:2	average values from server: 136, 88, 2426, 3688'
+8:13:24.219	ID:2	buzzer on!
+8:13:24.220	ID:2	DANGER!
+8:13:24.222	ID:2	LIGHT LED: OFF
+8:16:44.178	ID:2	Client sending to: fe80::200:0:0:1temperature 208 humidity 96 light 2620 gas 4220
+8:20:04.194	ID:2	Client sending to: fe80::200:0:0:1temperature 320 humidity 96 light 2260 gas 2220
+8:20:04.207	ID:1	Server received values: 320,96,2260,2220 from fe80::200:0:0:2
+8:20:04.213	ID:1	Server sensors: T 384 H 0 L 4308 G 700
+8:20:04.225	ID:1	Responding with message: avgtemperature 352 avghumidity 48 avglight 3284 avggas 1460
+8:20:04.232	ID:1	Signals after wait time: T 352 H 48 L 3284 G 1460
+8:20:04.234	ID:1	buzzer on!
+8:20:04.235	ID:1	DANGER!
+8:20:04.237	ID:1	LIGHT LED: ON
+8:20:04.249	ID:2	average values from server: 352, 48, 3284, 1460'
+8:20:04.250	ID:2	buzzer on!
+8:20:04.251	ID:2	DANGER!
+8:20:04.253	ID:2	LIGHT LED: ON
+8:23:24.210	ID:2	Client sending to: fe80::200:0:0:1temperature 320 humidity 96 light 2260 gas 2220
+8:26:44.225	ID:2	Client sending to: fe80::200:0:0:1temperature 320 humidity 96 light 2260 gas 2220
+8:30:04.241	ID:2	Client sending to: fe80::200:0:0:1temperature 320 humidity 96 light 2260 gas 2220
+8:30:04.254	ID:1	Server received values: 320,96,2260,2220 from fe80::200:0:0:2
+8:30:04.260	ID:1	Server sensors: T 384 H 0 L 4308 G 700
+8:30:04.272	ID:1	Responding with message: avgtemperature 352 avghumidity 48 avglight 3284 avggas 1460
+8:30:04.279	ID:1	Signals after wait time: T 352 H 48 L 3284 G 1460
+8:30:04.280	ID:1	buzzer on!
+8:30:04.281	ID:1	DANGER!
+8:30:04.283	ID:1	LIGHT LED: ON
+8:30:04.296	ID:2	average values from server: 352, 48, 3284, 1460'
+8:30:04.297	ID:2	buzzer on!
+8:30:04.298	ID:2	DANGER!
+8:30:04.300	ID:2	LIGHT LED: ON
+8:33:24.256	ID:2	Client sending to: fe80::200:0:0:1temperature 320 humidity 96 light 2260 gas 2220
+8:36:44.272	ID:2	Client sending to: fe80::200:0:0:1temperature 64 humidity 80 light 2232 gas 3156
+8:36:44.285	ID:1	Server received values: 64,80,2232,3156 from fe80::200:0:0:2
+8:36:44.291	ID:1	Server sensors: T 328 H 48 L 1496 G 3168
+8:36:44.303	ID:1	Responding with message: avgtemperature 196 avghumidity 64 avglight 1864 avggas 3162
+8:36:44.310	ID:1	Signals after wait time: T 196 H 64 L 1864 G 3162
+8:36:44.312	ID:1	buzzer on!
+8:36:44.313	ID:1	DANGER!
+8:36:44.315	ID:1	LIGHT LED: OFF
+8:36:44.327	ID:2	average values from server: 196, 64, 1864, 3162'
+8:36:44.328	ID:2	buzzer on!
+8:36:44.330	ID:2	DANGER!
+8:36:44.332	ID:2	LIGHT LED: OFF
+8:40:04.287	ID:2	Client sending to: fe80::200:0:0:1temperature 64 humidity 80 light 2232 gas 3156
+8:43:24.303	ID:2	Client sending to: fe80::200:0:0:1temperature 64 humidity 80 light 2232 gas 3156
+8:46:44.319	ID:2	Client sending to: fe80::200:0:0:1temperature 64 humidity 80 light 2232 gas 3156
+8:46:44.332	ID:1	Server received values: 64,80,2232,3156 from fe80::200:0:0:2
+8:46:44.338	ID:1	Server sensors: T 328 H 48 L 1496 G 3168
+8:46:44.350	ID:1	Responding with message: avgtemperature 196 avghumidity 64 avglight 1864 avggas 3162
+8:46:44.357	ID:1	Signals after wait time: T 196 H 64 L 1864 G 3162
+8:46:44.358	ID:1	buzzer on!
+8:46:44.360	ID:1	DANGER!
+8:46:44.362	ID:1	LIGHT LED: OFF
+8:46:44.374	ID:2	average values from server: 196, 64, 1864, 3162'
+8:46:44.375	ID:2	buzzer on!
+8:46:44.376	ID:2	DANGER!
+8:46:44.378	ID:2	LIGHT LED: OFF
+8:50:04.334	ID:2	Client sending to: fe80::200:0:0:1temperature 64 humidity 80 light 2232 gas 3156
+8:53:24.350	ID:2	Client sending to: fe80::200:0:0:1temperature 384 humidity 0 light 4308 gas 700
+8:53:24.363	ID:1	Server received values: 384,0,4308,700 from fe80::200:0:0:2
+8:53:24.369	ID:1	Server sensors: T 128 H 52 L 1612 G 2184
+8:53:24.381	ID:1	Responding with message: avgtemperature 256 avghumidity 26 avglight 2960 avggas 1442
+8:53:24.388	ID:1	Signals after wait time: T 256 H 26 L 2960 G 1442
+8:53:24.389	ID:1	buzzer off!
+8:53:24.391	ID:1	DANGER!
+8:53:24.393	ID:1	LIGHT LED: ON
+8:53:24.405	ID:2	average values from server: 256, 26, 2960, 1442'
+8:53:24.406	ID:2	buzzer off!
+8:53:24.407	ID:2	DANGER!
+8:53:24.409	ID:2	LIGHT LED: ON
+8:56:44.365	ID:2	Client sending to: fe80::200:0:0:1temperature 384 humidity 0 light 4308 gas 700
+9:00:04.381	ID:2	Client sending to: fe80::200:0:0:1temperature 384 humidity 0 light 4308 gas 700
+9:03:24.397	ID:2	Client sending to: fe80::200:0:0:1temperature 384 humidity 0 light 4308 gas 700
+9:03:24.410	ID:1	Server received values: 384,0,4308,700 from fe80::200:0:0:2
+9:03:24.415	ID:1	Server sensors: T 128 H 52 L 1612 G 2184
+9:03:24.428	ID:1	Responding with message: avgtemperature 256 avghumidity 26 avglight 2960 avggas 1442
+9:03:24.435	ID:1	Signals after wait time: T 256 H 26 L 2960 G 1442
+9:03:24.436	ID:1	buzzer off!
+9:03:24.437	ID:1	DANGER!
+9:03:24.439	ID:1	LIGHT LED: ON
+9:03:24.452	ID:2	average values from server: 256, 26, 2960, 1442'
+9:03:24.453	ID:2	buzzer off!
+9:03:24.454	ID:2	DANGER!
+9:03:24.456	ID:2	LIGHT LED: ON
+9:06:44.412	ID:2	Client sending to: fe80::200:0:0:1temperature 384 humidity 0 light 4308 gas 700
+9:10:04.428	ID:2	Client sending to: fe80::200:0:0:1temperature 328 humidity 48 light 1496 gas 3168
+9:10:04.442	ID:1	Server received values: 328,48,1496,3168 from fe80::200:0:0:2
+9:10:04.447	ID:1	Server sensors: T 280 H 48 L 1888 G 3140
+9:10:04.460	ID:1	Responding with message: avgtemperature 304 avghumidity 48 avglight 1692 avggas 3154
+9:10:04.467	ID:1	Signals after wait time: T 304 H 48 L 1692 G 3154
+9:10:04.468	ID:1	buzzer on!
+9:10:04.469	ID:1	DANGER!
+9:10:04.471	ID:1	LIGHT LED: OFF
+9:10:04.483	ID:2	average values from server: 304, 48, 1692, 3154'
+9:10:04.485	ID:2	buzzer on!
+9:10:04.486	ID:2	DANGER!
+9:10:04.488	ID:2	LIGHT LED: OFF
+9:13:24.444	ID:2	Client sending to: fe80::200:0:0:1temperature 328 humidity 48 light 1496 gas 3168
+9:16:44.460	ID:2	Client sending to: fe80::200:0:0:1temperature 328 humidity 48 light 1496 gas 3168
+9:20:04.475	ID:2	Client sending to: fe80::200:0:0:1temperature 328 humidity 48 light 1496 gas 3168
+9:20:04.489	ID:1	Server received values: 328,48,1496,3168 from fe80::200:0:0:2
+9:20:04.494	ID:1	Server sensors: T 280 H 48 L 1888 G 3140
+9:20:04.507	ID:1	Responding with message: avgtemperature 304 avghumidity 48 avglight 1692 avggas 3154
+9:20:04.514	ID:1	Signals after wait time: T 304 H 48 L 1692 G 3154
+9:20:04.515	ID:1	buzzer on!
+9:20:04.516	ID:1	DANGER!
+9:20:04.518	ID:1	LIGHT LED: OFF
+9:20:04.530	ID:2	average values from server: 304, 48, 1692, 3154'
+9:20:04.532	ID:2	buzzer on!
+9:20:04.533	ID:2	DANGER!
+9:20:04.535	ID:2	LIGHT LED: OFF
+9:23:24.491	ID:2	Client sending to: fe80::200:0:0:1temperature 328 humidity 48 light 1496 gas 3168
+9:26:44.506	ID:2	Client sending to: fe80::200:0:0:1temperature 128 humidity 52 light 1612 gas 2184
+9:26:44.520	ID:1	Server received values: 128,52,1612,2184 from fe80::200:0:0:2
+9:26:44.525	ID:1	Server sensors: T 352 H 44 L 4396 G 3248
+9:26:44.538	ID:1	Responding with message: avgtemperature 240 avghumidity 48 avglight 3004 avggas 2716
+9:26:44.545	ID:1	Signals after wait time: T 240 H 48 L 3004 G 2716
+9:26:44.546	ID:1	buzzer on!
+9:26:44.547	ID:1	DANGER!
+9:26:44.549	ID:1	LIGHT LED: ON
+9:26:44.561	ID:2	average values from server: 240, 48, 3004, 2716'
+9:26:44.563	ID:2	buzzer on!
+9:26:44.564	ID:2	DANGER!
+9:26:44.566	ID:2	LIGHT LED: ON
+9:30:04.522	ID:2	Client sending to: fe80::200:0:0:1temperature 128 humidity 52 light 1612 gas 2184
+9:33:24.538	ID:2	Client sending to: fe80::200:0:0:1temperature 128 humidity 52 light 1612 gas 2184
+9:36:44.553	ID:2	Client sending to: fe80::200:0:0:1temperature 128 humidity 52 light 1612 gas 2184
+9:36:44.567	ID:1	Server received values: 128,52,1612,2184 from fe80::200:0:0:2
+9:36:44.572	ID:1	Server sensors: T 352 H 44 L 4396 G 3248
+9:36:44.585	ID:1	Responding with message: avgtemperature 240 avghumidity 48 avglight 3004 avggas 2716
+9:36:44.592	ID:1	Signals after wait time: T 240 H 48 L 3004 G 2716
+9:36:44.593	ID:1	buzzer on!
+9:36:44.594	ID:1	DANGER!
+9:36:44.596	ID:1	LIGHT LED: ON
+9:36:44.608	ID:2	average values from server: 240, 48, 3004, 2716'
+9:36:44.610	ID:2	buzzer on!
+9:36:44.611	ID:2	DANGER!
+9:36:44.613	ID:2	LIGHT LED: ON
+9:40:04.569	ID:2	Client sending to: fe80::200:0:0:1temperature 128 humidity 52 light 1612 gas 2184
+9:43:24.585	ID:2	Client sending to: fe80::200:0:0:1temperature 280 humidity 48 light 1888 gas 3140
+9:43:24.598	ID:1	Server received values: 280,48,1888,3140 from fe80::200:0:0:2
+9:43:24.603	ID:1	Server sensors: T 0 H 28 L 3736 G 3264
+9:43:24.616	ID:1	Responding with message: avgtemperature 140 avghumidity 38 avglight 2812 avggas 3202
+9:43:24.623	ID:1	Signals after wait time: T 140 H 38 L 2812 G 3202
+9:43:24.624	ID:1	buzzer off!
+9:43:24.625	ID:1	DANGER!
+9:43:24.627	ID:1	LIGHT LED: ON
+9:43:24.639	ID:2	average values from server: 140, 38, 2812, 3202'
+9:43:24.641	ID:2	buzzer off!
+9:43:24.642	ID:2	DANGER!
+9:43:24.644	ID:2	LIGHT LED: ON
+9:46:44.600	ID:2	Client sending to: fe80::200:0:0:1temperature 280 humidity 48 light 1888 gas 3140
+9:50:04.616	ID:2	Client sending to: fe80::200:0:0:1temperature 280 humidity 48 light 1888 gas 3140
+9:53:24.631	ID:2	Client sending to: fe80::200:0:0:1temperature 280 humidity 48 light 1888 gas 3140
+9:53:24.645	ID:1	Server received values: 280,48,1888,3140 from fe80::200:0:0:2
+9:53:24.650	ID:1	Server sensors: T 0 H 28 L 3736 G 3264
+9:53:24.663	ID:1	Responding with message: avgtemperature 140 avghumidity 38 avglight 2812 avggas 3202
+9:53:24.669	ID:1	Signals after wait time: T 140 H 38 L 2812 G 3202
+9:53:24.671	ID:1	buzzer off!
+9:53:24.672	ID:1	DANGER!
+9:53:24.674	ID:1	LIGHT LED: ON
+9:53:24.686	ID:2	average values from server: 140, 38, 2812, 3202'
+9:53:24.688	ID:2	buzzer off!
+9:53:24.689	ID:2	DANGER!
+9:53:24.691	ID:2	LIGHT LED: ON
+9:56:44.647	ID:2	Client sending to: fe80::200:0:0:1temperature 280 humidity 48 light 1888 gas 3140
+10:00:04.663	ID:2	Client sending to: fe80::200:0:0:1temperature 352 humidity 44 light 4396 gas 3248
+10:00:04.676	ID:1	Server received values: 352,44,4396,3248 from fe80::200:0:0:2
+10:00:04.682	ID:1	Server sensors: T 144 H 28 L 1840 G 364
+10:00:04.694	ID:1	Responding with message: avgtemperature 248 avghumidity 36 avglight 3118 avggas 1806
+10:00:04.701	ID:1	Signals after wait time: T 248 H 36 L 3118 G 1806
+10:00:04.703	ID:1	buzzer off!
+10:00:04.704	ID:1	DANGER!
+10:00:04.706	ID:1	LIGHT LED: ON
+10:00:04.718	ID:2	average values from server: 248, 36, 3118, 1806'
+10:00:04.719	ID:2	buzzer off!
+10:00:04.720	ID:2	DANGER!
+10:00:04.722	ID:2	LIGHT LED: ON
+10:03:24.678	ID:2	Client sending to: fe80::200:0:0:1temperature 352 humidity 44 light 4396 gas 3248
+10:06:44.694	ID:2	Client sending to: fe80::200:0:0:1temperature 352 humidity 44 light 4396 gas 3248
+10:10:04.710	ID:2	Client sending to: fe80::200:0:0:1temperature 352 humidity 44 light 4396 gas 3248
+10:10:04.723	ID:1	Server received values: 352,44,4396,3248 from fe80::200:0:0:2
+10:10:04.728	ID:1	Server sensors: T 144 H 28 L 1840 G 364
+10:10:04.741	ID:1	Responding with message: avgtemperature 248 avghumidity 36 avglight 3118 avggas 1806
+10:10:04.748	ID:1	Signals after wait time: T 248 H 36 L 3118 G 1806
+10:10:04.749	ID:1	buzzer off!
+10:10:04.751	ID:1	DANGER!
+10:10:04.752	ID:1	LIGHT LED: ON
+10:10:04.765	ID:2	average values from server: 248, 36, 3118, 1806'
+10:10:04.766	ID:2	buzzer off!
+10:10:04.767	ID:2	DANGER!
+10:10:04.769	ID:2	LIGHT LED: ON
+10:13:24.725	ID:2	Client sending to: fe80::200:0:0:1temperature 352 humidity 44 light 4396 gas 3248
+10:16:44.740	ID:2	Client sending to: fe80::200:0:0:1temperature 0 humidity 28 light 3736 gas 3264
+10:16:44.753	ID:1	Server received values: 0,28,3736,3264 from fe80::200:0:0:2
+10:16:44.759	ID:1	Server sensors: T 240 H 92 L 2804 G 2088
+10:16:44.771	ID:1	Responding with message: avgtemperature 120 avghumidity 60 avglight 3270 avggas 2676
+10:16:44.778	ID:1	Signals after wait time: T 120 H 60 L 3270 G 2676
+10:16:44.780	ID:1	buzzer on!
+10:16:44.781	ID:1	DANGER!
+10:16:44.783	ID:1	LIGHT LED: ON
+10:16:44.795	ID:2	average values from server: 120, 60, 3270, 2676'
+10:16:44.797	ID:2	buzzer on!
+10:16:44.798	ID:2	DANGER!
+10:16:44.800	ID:2	LIGHT LED: ON
+10:20:04.756	ID:2	Client sending to: fe80::200:0:0:1temperature 0 humidity 28 light 3736 gas 3264
+10:23:24.772	ID:2	Client sending to: fe80::200:0:0:1temperature 0 humidity 28 light 3736 gas 3264
+10:26:44.787	ID:2	Client sending to: fe80::200:0:0:1temperature 0 humidity 28 light 3736 gas 3264
+10:26:44.800	ID:1	Server received values: 0,28,3736,3264 from fe80::200:0:0:2
+10:26:44.806	ID:1	Server sensors: T 240 H 92 L 2804 G 2088
+10:26:44.818	ID:1	Responding with message: avgtemperature 120 avghumidity 60 avglight 3270 avggas 2676
+10:26:44.825	ID:1	Signals after wait time: T 120 H 60 L 3270 G 2676
+10:26:44.827	ID:1	buzzer on!
+10:26:44.828	ID:1	DANGER!
+10:26:44.830	ID:1	LIGHT LED: ON
+10:26:44.842	ID:2	average values from server: 120, 60, 3270, 2676'
+10:26:44.844	ID:2	buzzer on!
+10:26:44.845	ID:2	DANGER!
+10:26:44.847	ID:2	LIGHT LED: ON
+10:30:04.803	ID:2	Client sending to: fe80::200:0:0:1temperature 0 humidity 28 light 3736 gas 3264
+10:33:24.819	ID:2	Client sending to: fe80::200:0:0:1temperature 144 humidity 28 light 1840 gas 364
+10:33:24.832	ID:1	Server received values: 144,28,1840,364 from fe80::200:0:0:2
+10:33:24.838	ID:1	Server sensors: T 240 H 88 L 3788 G 2260
+10:33:24.850	ID:1	Responding with message: avgtemperature 192 avghumidity 58 avglight 2814 avggas 1312
+10:33:24.857	ID:1	Signals after wait time: T 192 H 58 L 2814 G 1312
+10:33:24.858	ID:1	buzzer on!
+10:33:24.860	ID:1	DANGER!
+10:33:24.861	ID:1	LIGHT LED: ON
+10:33:24.874	ID:2	average values from server: 192, 58, 2814, 1312'
+10:33:24.875	ID:2	buzzer on!
+10:33:24.876	ID:2	DANGER!
+10:33:24.878	ID:2	LIGHT LED: ON
+10:36:44.834	ID:2	Client sending to: fe80::200:0:0:1temperature 144 humidity 28 light 1840 gas 364
+10:40:04.850	ID:2	Client sending to: fe80::200:0:0:1temperature 144 humidity 28 light 1840 gas 364
+10:43:24.866	ID:2	Client sending to: fe80::200:0:0:1temperature 144 humidity 28 light 1840 gas 364
+10:43:24.879	ID:1	Server received values: 144,28,1840,364 from fe80::200:0:0:2
+10:43:24.885	ID:1	Server sensors: T 240 H 88 L 3788 G 2260
+10:43:24.897	ID:1	Responding with message: avgtemperature 192 avghumidity 58 avglight 2814 avggas 1312
+10:43:24.904	ID:1	Signals after wait time: T 192 H 58 L 2814 G 1312
+10:43:24.905	ID:1	buzzer on!
+10:43:24.906	ID:1	DANGER!
+10:43:24.908	ID:1	LIGHT LED: ON
+10:43:24.920	ID:2	average values from server: 192, 58, 2814, 1312'
+10:43:24.922	ID:2	buzzer on!
+10:43:24.923	ID:2	DANGER!
+10:43:24.925	ID:2	LIGHT LED: ON
+10:46:44.881	ID:2	Client sending to: fe80::200:0:0:1temperature 144 humidity 28 light 1840 gas 364
+10:50:04.897	ID:2	Client sending to: fe80::200:0:0:1temperature 240 humidity 92 light 2804 gas 2088
+10:50:04.910	ID:1	Server received values: 240,92,2804,2088 from fe80::200:0:0:2
+10:50:04.916	ID:1	Server sensors: T 32 H 32 L 1720 G 716
+10:50:04.928	ID:1	Responding with message: avgtemperature 136 avghumidity 62 avglight 2262 avggas 1402
+10:50:04.935	ID:1	Signals after wait time: T 136 H 62 L 2262 G 1402
+10:50:04.937	ID:1	buzzer on!
+10:50:04.938	ID:1	DANGER!
+10:50:04.940	ID:1	LIGHT LED: OFF
+10:50:04.952	ID:2	average values from server: 136, 62, 2262, 1402'
+10:50:04.953	ID:2	buzzer on!
+10:50:04.955	ID:2	DANGER!
+10:50:04.957	ID:2	LIGHT LED: OFF
+10:53:24.913	ID:2	Client sending to: fe80::200:0:0:1temperature 240 humidity 92 light 2804 gas 2088
+10:56:44.928	ID:2	Client sending to: fe80::200:0:0:1temperature 240 humidity 92 light 2804 gas 2088
+11:00:04.944	ID:2	Client sending to: fe80::200:0:0:1temperature 240 humidity 92 light 2804 gas 2088
+11:00:04.957	ID:1	Server received values: 240,92,2804,2088 from fe80::200:0:0:2
+11:00:04.963	ID:1	Server sensors: T 32 H 32 L 1720 G 716
+11:00:04.975	ID:1	Responding with message: avgtemperature 136 avghumidity 62 avglight 2262 avggas 1402
+11:00:04.982	ID:1	Signals after wait time: T 136 H 62 L 2262 G 1402
+11:00:04.984	ID:1	buzzer on!
+11:00:04.985	ID:1	DANGER!
+11:00:04.987	ID:1	LIGHT LED: OFF
+11:00:04.999	ID:2	average values from server: 136, 62, 2262, 1402'
+11:00:05.000	ID:2	buzzer on!
+11:00:05.001	ID:2	DANGER!
+11:00:05.004	ID:2	LIGHT LED: OFF
+11:03:24.960	ID:2	Client sending to: fe80::200:0:0:1temperature 240 humidity 92 light 2804 gas 2088
+11:06:44.975	ID:2	Client sending to: fe80::200:0:0:1temperature 240 humidity 88 light 3788 gas 2260
+11:06:44.989	ID:1	Server received values: 240,88,3788,2260 from fe80::200:0:0:2
+11:06:44.994	ID:1	Server sensors: T 288 H 60 L 3576 G 2480
+11:06:45.007	ID:1	Responding with message: avgtemperature 264 avghumidity 74 avglight 3682 avggas 2370
+11:06:45.014	ID:1	Signals after wait time: T 264 H 74 L 3682 G 2370
+11:06:45.015	ID:1	buzzer on!
+11:06:45.016	ID:1	DANGER!
+11:06:45.018	ID:1	LIGHT LED: ON
+11:06:45.030	ID:2	average values from server: 264, 74, 3682, 2370'
+11:06:45.032	ID:2	buzzer on!
+11:06:45.033	ID:2	DANGER!
+11:06:45.035	ID:2	LIGHT LED: ON
+11:10:04.991	ID:2	Client sending to: fe80::200:0:0:1temperature 240 humidity 88 light 3788 gas 2260
+11:13:25.006	ID:2	Client sending to: fe80::200:0:0:1temperature 240 humidity 88 light 3788 gas 2260
+11:16:45.022	ID:2	Client sending to: fe80::200:0:0:1temperature 240 humidity 88 light 3788 gas 2260
+11:16:45.035	ID:1	Server received values: 240,88,3788,2260 from fe80::200:0:0:2
+11:16:45.041	ID:1	Server sensors: T 288 H 60 L 3576 G 2480
+11:16:45.053	ID:1	Responding with message: avgtemperature 264 avghumidity 74 avglight 3682 avggas 2370
+11:16:45.060	ID:1	Signals after wait time: T 264 H 74 L 3682 G 2370
+11:16:45.062	ID:1	buzzer on!
+11:16:45.063	ID:1	DANGER!
+11:16:45.065	ID:1	LIGHT LED: ON
+11:16:45.077	ID:2	average values from server: 264, 74, 3682, 2370'
+11:16:45.079	ID:2	buzzer on!
+11:16:45.080	ID:2	DANGER!
+11:16:45.082	ID:2	LIGHT LED: ON
+11:20:05.038	ID:2	Client sending to: fe80::200:0:0:1temperature 240 humidity 88 light 3788 gas 2260
+11:23:25.053	ID:2	Client sending to: fe80::200:0:0:1temperature 32 humidity 32 light 1720 gas 716
+11:23:25.066	ID:1	Server received values: 32,32,1720,716 from fe80::200:0:0:2
+11:23:25.072	ID:1	Server sensors: T 200 H 0 L 1908 G 4000
+11:23:25.084	ID:1	Responding with message: avgtemperature 116 avghumidity 16 avglight 1814 avggas 2358
+11:23:25.091	ID:1	Signals after wait time: T 116 H 16 L 1814 G 2358
+11:23:25.092	ID:1	buzzer off!
+11:23:25.094	ID:1	DANGER!
+11:23:25.096	ID:1	LIGHT LED: OFF
+11:23:25.108	ID:2	average values from server: 116, 16, 1814, 2358'
+11:23:25.109	ID:2	buzzer off!
+11:23:25.111	ID:2	DANGER!
+11:23:25.113	ID:2	LIGHT LED: OFF
+11:26:45.069	ID:2	Client sending to: fe80::200:0:0:1temperature 32 humidity 32 light 1720 gas 716
+11:30:05.084	ID:2	Client sending to: fe80::200:0:0:1temperature 32 humidity 32 light 1720 gas 716
+11:33:25.100	ID:2	Client sending to: fe80::200:0:0:1temperature 32 humidity 32 light 1720 gas 716
+11:33:25.113	ID:1	Server received values: 32,32,1720,716 from fe80::200:0:0:2
+11:33:25.118	ID:1	Server sensors: T 200 H 0 L 1908 G 4000
+11:33:25.131	ID:1	Responding with message: avgtemperature 116 avghumidity 16 avglight 1814 avggas 2358
+11:33:25.138	ID:1	Signals after wait time: T 116 H 16 L 1814 G 2358
+11:33:25.139	ID:1	buzzer off!
+11:33:25.140	ID:1	DANGER!
+11:33:25.143	ID:1	LIGHT LED: OFF
+11:33:25.155	ID:2	average values from server: 116, 16, 1814, 2358'
+11:33:25.156	ID:2	buzzer off!
+11:33:25.157	ID:2	DANGER!
+11:33:25.160	ID:2	LIGHT LED: OFF
+11:36:45.115	ID:2	Client sending to: fe80::200:0:0:1temperature 32 humidity 32 light 1720 gas 716
+11:40:05.131	ID:2	Client sending to: fe80::200:0:0:1temperature 288 humidity 60 light 3576 gas 2480
+11:40:05.145	ID:1	Server received values: 288,60,3576,2480 from fe80::200:0:0:2
+11:40:05.150	ID:1	Server sensors: T 96 H 80 L 4000 G 4256
+11:40:05.163	ID:1	Responding with message: avgtemperature 192 avghumidity 70 avglight 3788 avggas 3368
+11:40:05.170	ID:1	Signals after wait time: T 192 H 70 L 3788 G 3368
+11:40:05.171	ID:1	buzzer on!
+11:40:05.172	ID:1	DANGER!
+11:40:05.174	ID:1	LIGHT LED: ON
+11:40:05.186	ID:2	average values from server: 192, 70, 3788, 3368'
+11:40:05.188	ID:2	buzzer on!
+11:40:05.189	ID:2	DANGER!
+11:40:05.191	ID:2	LIGHT LED: ON
+11:43:25.147	ID:2	Client sending to: fe80::200:0:0:1temperature 288 humidity 60 light 3576 gas 2480
+11:46:45.163	ID:2	Client sending to: fe80::200:0:0:1temperature 288 humidity 60 light 3576 gas 2480
+11:50:05.178	ID:2	Client sending to: fe80::200:0:0:1temperature 288 humidity 60 light 3576 gas 2480
+11:50:05.192	ID:1	Server received values: 288,60,3576,2480 from fe80::200:0:0:2
+11:50:05.197	ID:1	Server sensors: T 96 H 80 L 4000 G 4256
+11:50:05.210	ID:1	Responding with message: avgtemperature 192 avghumidity 70 avglight 3788 avggas 3368
+11:50:05.216	ID:1	Signals after wait time: T 192 H 70 L 3788 G 3368
+11:50:05.218	ID:1	buzzer on!
+11:50:05.219	ID:1	DANGER!
+11:50:05.221	ID:1	LIGHT LED: ON
+11:50:05.233	ID:2	average values from server: 192, 70, 3788, 3368'
+11:50:05.235	ID:2	buzzer on!
+11:50:05.236	ID:2	DANGER!
+11:50:05.238	ID:2	LIGHT LED: ON
+11:53:25.194	ID:2	Client sending to: fe80::200:0:0:1temperature 288 humidity 60 light 3576 gas 2480
+11:56:45.209	ID:2	Client sending to: fe80::200:0:0:1temperature 200 humidity 0 light 1908 gas 4000
+11:56:45.223	ID:1	Server received values: 200,0,1908,4000 from fe80::200:0:0:2
+11:56:45.228	ID:1	Server sensors: T 296 H 52 L 2708 G 2276
+11:56:45.241	ID:1	Responding with message: avgtemperature 248 avghumidity 26 avglight 2308 avggas 3138
+11:56:45.248	ID:1	Signals after wait time: T 248 H 26 L 2308 G 3138
+11:56:45.249	ID:1	buzzer off!
+11:56:45.250	ID:1	DANGER!
+11:56:45.252	ID:1	LIGHT LED: OFF
+11:56:45.265	ID:2	average values from server: 248, 26, 2308, 3138'
+11:56:45.266	ID:2	buzzer off!
+11:56:45.267	ID:2	DANGER!
+11:56:45.269	ID:2	LIGHT LED: OFF
+12:00:05.225	ID:2	Client sending to: fe80::200:0:0:1temperature 200 humidity 0 light 1908 gas 4000
+12:03:25.241	ID:2	Client sending to: fe80::200:0:0:1temperature 200 humidity 0 light 1908 gas 4000
+12:06:45.256	ID:2	Client sending to: fe80::200:0:0:1temperature 200 humidity 0 light 1908 gas 4000
+12:06:45.269	ID:1	Server received values: 200,0,1908,4000 from fe80::200:0:0:2
+12:06:45.275	ID:1	Server sensors: T 296 H 52 L 2708 G 2276
+12:06:45.287	ID:1	Responding with message: avgtemperature 248 avghumidity 26 avglight 2308 avggas 3138
+12:06:45.294	ID:1	Signals after wait time: T 248 H 26 L 2308 G 3138
+12:06:45.296	ID:1	buzzer off!
+12:06:45.297	ID:1	DANGER!
+12:06:45.299	ID:1	LIGHT LED: OFF
+12:06:45.311	ID:2	average values from server: 248, 26, 2308, 3138'
+12:06:45.313	ID:2	buzzer off!
+12:06:45.314	ID:2	DANGER!
+12:06:45.316	ID:2	LIGHT LED: OFF
+12:10:05.272	ID:2	Client sending to: fe80::200:0:0:1temperature 200 humidity 0 light 1908 gas 4000
+12:13:25.287	ID:2	Client sending to: fe80::200:0:0:1temperature 96 humidity 80 light 4000 gas 4256
+12:13:25.301	ID:1	Server received values: 96,80,4000,4256 from fe80::200:0:0:2
+12:13:25.306	ID:1	Server sensors: T 312 H 0 L 372 G 3100
+12:13:25.318	ID:1	Responding with message: avgtemperature 204 avghumidity 40 avglight 2186 avggas 3678
+12:13:25.325	ID:1	Signals after wait time: T 204 H 40 L 2186 G 3678
+12:13:25.327	ID:1	buzzer on!
+12:13:25.328	ID:1	DANGER!
+12:13:25.330	ID:1	LIGHT LED: OFF
+12:13:25.342	ID:2	average values from server: 204, 40, 2186, 3678'
+12:13:25.344	ID:2	buzzer on!
+12:13:25.345	ID:2	DANGER!
+12:13:25.347	ID:2	LIGHT LED: OFF
+12:16:45.303	ID:2	Client sending to: fe80::200:0:0:1temperature 96 humidity 80 light 4000 gas 4256
+12:20:05.319	ID:2	Client sending to: fe80::200:0:0:1temperature 96 humidity 80 light 4000 gas 4256
+12:23:25.334	ID:2	Client sending to: fe80::200:0:0:1temperature 96 humidity 80 light 4000 gas 4256
+12:23:25.348	ID:1	Server received values: 96,80,4000,4256 from fe80::200:0:0:2
+12:23:25.353	ID:1	Server sensors: T 312 H 0 L 372 G 3100
+12:23:25.365	ID:1	Responding with message: avgtemperature 204 avghumidity 40 avglight 2186 avggas 3678
+12:23:25.372	ID:1	Signals after wait time: T 204 H 40 L 2186 G 3678
+12:23:25.374	ID:1	buzzer on!
+12:23:25.375	ID:1	DANGER!
+12:23:25.377	ID:1	LIGHT LED: OFF
+12:23:25.389	ID:2	average values from server: 204, 40, 2186, 3678'
+12:23:25.391	ID:2	buzzer on!
+12:23:25.392	ID:2	DANGER!
+12:23:25.394	ID:2	LIGHT LED: OFF
+12:26:45.350	ID:2	Client sending to: fe80::200:0:0:1temperature 96 humidity 80 light 4000 gas 4256
+12:30:05.366	ID:2	Client sending to: fe80::200:0:0:1temperature 296 humidity 52 light 2708 gas 2276
+12:30:05.379	ID:1	Server received values: 296,52,2708,2276 from fe80::200:0:0:2
+12:30:05.385	ID:1	Server sensors: T 336 H 0 L 1684 G 3500
+12:30:05.397	ID:1	Responding with message: avgtemperature 316 avghumidity 26 avglight 2196 avggas 2888
+12:30:05.404	ID:1	Signals after wait time: T 316 H 26 L 2196 G 2888
+12:30:05.406	ID:1	buzzer off!
+12:30:05.407	ID:1	DANGER!
+12:30:05.409	ID:1	LIGHT LED: OFF
+12:30:05.421	ID:2	average values from server: 316, 26, 2196, 2888'
+12:30:05.423	ID:2	buzzer off!
+12:30:05.424	ID:2	DANGER!
+12:30:05.426	ID:2	LIGHT LED: OFF
+12:33:25.381	ID:2	Client sending to: fe80::200:0:0:1temperature 296 humidity 52 light 2708 gas 2276
+12:36:45.397	ID:2	Client sending to: fe80::200:0:0:1temperature 296 humidity 52 light 2708 gas 2276
+12:40:05.413	ID:2	Client sending to: fe80::200:0:0:1temperature 296 humidity 52 light 2708 gas 2276
+12:40:05.426	ID:1	Server received values: 296,52,2708,2276 from fe80::200:0:0:2
+12:40:05.432	ID:1	Server sensors: T 336 H 0 L 1684 G 3500
+12:40:05.444	ID:1	Responding with message: avgtemperature 316 avghumidity 26 avglight 2196 avggas 2888
+12:40:05.451	ID:1	Signals after wait time: T 316 H 26 L 2196 G 2888
+12:40:05.453	ID:1	buzzer off!
+12:40:05.454	ID:1	DANGER!
+12:40:05.456	ID:1	LIGHT LED: OFF
+12:40:05.468	ID:2	average values from server: 316, 26, 2196, 2888'
+12:40:05.470	ID:2	buzzer off!
+12:40:05.471	ID:2	DANGER!
+12:40:05.473	ID:2	LIGHT LED: OFF
+12:43:25.428	ID:2	Client sending to: fe80::200:0:0:1temperature 296 humidity 52 light 2708 gas 2276
+12:46:45.444	ID:2	Client sending to: fe80::200:0:0:1temperature 312 humidity 0 light 372 gas 3100
+12:46:45.457	ID:1	Server received values: 312,0,372,3100 from fe80::200:0:0:2
+12:46:45.462	ID:1	Server sensors: T 176 H 92 L 1044 G 2188
+12:46:45.474	ID:1	Responding with message: avgtemperature 244 avghumidity 46 avglight 708 avggas 2644
+12:46:45.481	ID:1	Signals after wait time: T 244 H 46 L 708 G 2644
+12:46:45.483	ID:1	buzzer on!
+12:46:45.484	ID:1	DANGER!
+12:46:45.486	ID:1	LIGHT LED: OFF
+12:46:45.498	ID:2	average values from server: 244, 46, 708, 2644'
+12:46:45.499	ID:2	buzzer on!
+12:46:45.501	ID:2	DANGER!
+12:46:45.503	ID:2	LIGHT LED: OFF
