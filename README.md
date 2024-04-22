@@ -48,9 +48,10 @@ A Smart Lamppost System (SLS) using ESP32 microcontrollers and the Cooja simulat
    4. Open Cooja 
    5. Create a Wismote choose file and navigate to contiki-> examples -> udp-ipv6 -> esp-server.c, only create 1.
    6. Create a Wismote choose file and navigate to contiki-> examples -> udp-ipv6 -> esp-client.c, create n, note more than 2 will most likely not work due to original udp-client udp-server limitations.
-   7. Begin simulation
-   8. Watch LEDs and Serial Output.
-   9. A final recommendation is to save to file for easy monitoring.
+   7. Alternativly you can open an already made .csc file.
+   8. Begin simulation
+   9. Watch LEDs and Serial Output.
+   10. A final recommendation is to save to file for easy monitoring.
 
    ## Steps to Run ESP System
    ### Server First
