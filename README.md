@@ -52,7 +52,7 @@ A Smart Lamppost System (SLS) using ESP32 microcontrollers and the Cooja simulat
    3. Open hotspot and type your ssid and password in WIFI_SSID and WIFI_PASS fields
    4. Run code
   
-   5. ## Steps to Run Cooja Simulation
+   ## Steps to Run Cooja Simulation
    1. If you do not have Contiki it can be installed using this tutorial: https://inrg.engineering.ucsc.edu/howto-setup-instant-contiki-with-virtualbox/
    2. If you are using VirtualBox create a shared folder and put in Contiki-Edited
    3. Replace "contiki" in the home folder with "Contiki-Edited" (change the name of Contiki-Edited to contiki)
