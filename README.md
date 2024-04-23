@@ -25,7 +25,7 @@ A Smart Lamppost System (SLS) using ESP32 microcontrollers and the Cooja simulat
    
    The datasheet can be viewed [here](https://www.mouser.com/datasheet/2/758/DHT11-Technical-Data-Sheet-Translated-Version-1143054.pdf)
 
-   ## Libraries used in Aruino IDE
+   ## Libraries used in Arduino IDE
    ### Client
 
    1. **Adafruit Unified Sensor by Adafruit**
@@ -46,13 +46,15 @@ A Smart Lamppost System (SLS) using ESP32 microcontrollers and the Cooja simulat
    2. If you are using VirtualBox create a shared folder and put in Contiki-Edited
    3. Navigate to contiki -> examples
    4. Replace udp-ipv6 folder with the udp-ipv6 folder in this repository (found under Contiki).
-   5. Open Cooja 
-   6. Create a Wismote choose file and navigate to contiki-> examples -> udp-ipv6 -> esp-server.c, only create 1.
-   7. Create a Wismote choose file and navigate to contiki-> examples -> udp-ipv6 -> esp-client.c, create n, note more than 2 will most likely not work due to original udp-client udp-server limitations.
-   8. Alternativly you can open an already made .csc file.
-   9. Begin simulation
-   10. Watch LEDs and Serial Output.
-   11. A final recommendation is to save to file for easy monitoring.
+   5. Navigate to contiki -> platforms
+   6. Replace wismote folder with the wismote folder in this repository (found under Contiki/Wismote)
+   7. Open Cooja 
+   8. Create a Wismote choose file and navigate to contiki-> examples -> udp-ipv6 -> esp-server.c, only create 1.
+   9. Create a Wismote choose file and navigate to contiki-> examples -> udp-ipv6 -> esp-client.c, create n, note more than 2 will most likely not work due to original udp-client udp-server limitations.
+   10. Alternativly you can open an already made .csc file.
+   11. Begin simulation
+   12. Watch LEDs and Serial Output.
+   13. A final recommendation is to save to file for easy monitoring.
 
    ## Steps to Run ESP System
    ### Server First
@@ -61,10 +63,10 @@ A Smart Lamppost System (SLS) using ESP32 microcontrollers and the Cooja simulat
    3. Run code
    ### Then Client
    1. Connect circuit and connect to computer via thunderbolt cable
-   2. Install server libraries
+   2. Install client libraries
    3. Open hotspot and type your ssid and password in WIFI_SSID and WIFI_PASS fields
    4. Run code
    <blockquote style="background-color: #ffffcc; border-left: 5px solid #ffeb3b; padding: 10px;">
-    <strong>Important:</strong> You may run into a sketch is too big error in aruino, to solve this open the Aruino IDE go to tools >> partition scheme and set it to Minimal SPIFFS (1.9MB with OTA/190KB SPIFFS)
+    <strong>Important:</strong> You may run into a sketch is too big error in arduino, to solve this open the arduino IDE go to tools >> partition scheme and set it to Minimal SPIFFS (1.9MB with OTA/190KB SPIFFS)
 </blockquote>
 
